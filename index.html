@@ -1,0 +1,3907 @@
+<html lang="" xmlns:mso="urn:schemas-microsoft-com:office:office"
+	xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+
+<head>
+	<meta charset="utf-8" />
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0" name="viewport">
+	<title></title>
+	<!-- Favicon goes here -->
+	<link rel="icon" type="image/x-icon" href="">
+
+	<link rel="preconnect" href="https://www.googletagmanager.com">
+	<link rel="preconnect" href="https://www.google-analytics.com">
+	<style>
+		/*!
+			 * Bootstrap v3.3.7 (http://getbootstrap.com)
+			 * Copyright 2011-2016 Twitter, Inc.
+			 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+			 
+			# sourceMappingURL=bootstrap.min.css.map
+
+			/************************ common.css ******************************/
+		* {
+			margin: 0;
+			outline: medium none;
+			padding: 0;
+			resize: none;
+		}
+
+		html {
+			height: 100%;
+		}
+
+		body {
+			height: 100%;
+			width: 100%;
+		}
+
+		html,
+		body {
+			min-height: 100%;
+			background-size: cover;
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		form {
+			width: 100%;
+		}
+
+		#footer {
+			position: relative;
+			bottom: 0px;
+			left: 0px;
+			width: 100%;
+			height: auto;
+			margin-top: 70px;
+		}
+
+		.allow-popup #footer {
+			margin-top: 70px;
+			position: absolute;
+		}
+
+		.otp_popup_invideo {}
+
+		.otp_popup_invideo #footer {
+			font-size: 11px;
+			color: #fff;
+			margin: 15px auto;
+			opacity: 0.3;
+			padding: 0 12px;
+		}
+
+		.otp_popup_invideo.allow-popup #footer {
+			position: relative;
+		}
+
+		.ar #footer {
+			direction: rtl;
+		}
+
+		.price {
+			color: #fff;
+			text-align: center;
+			font-size: 1.2em;
+			font-weight: 500;
+		}
+
+		.wrapper {
+			position: relative;
+			width: 100%;
+			/*min-height:100%; */
+			height: auto;
+			max-width: 1000px;
+			margin: 0 auto;
+		}
+
+		.ar.wrapper {
+			direction: rtl;
+		}
+
+		.loader {
+			display: none;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+		}
+
+		.loader span {
+			width: 32px;
+			height: 32px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-left: -32px;
+			margin-top: -32px;
+			display: block;
+			background-position: 0 0;
+			background-repeat: no-repeat;
+		}
+
+		body.loading {
+			overflow: hidden;
+		}
+
+		.loading .wrapper {
+			opacity: .2;
+			filter: alpha(opacity=20);
+		}
+
+		.loading .loader {
+			display: block;
+		}
+
+		a:link,
+		a:visited,
+		a:hover,
+		a:active,
+		a:focus {
+			text-decoration: none;
+		}
+
+		.opaque {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			opacity: .5;
+			filter: alpha(opacity=20);
+			display: none;
+			background-color: #000;
+		}
+
+		/*lookup flags style */
+		.country_flag {
+			float: left;
+			height: 100%;
+			display: table;
+			padding-right: 10px;
+			padding-left: 5px;
+		}
+
+		.ar .country_flag {
+			float: right;
+			padding-left: 10px;
+		}
+
+		.country_flag .flag-wrapper {
+			width: 32px;
+			height: 32px;
+			display: table-cell;
+			vertical-align: middle;
+		}
+
+		.country_flag .flag {
+			width: 32px;
+			height: 32px;
+			background-position: 0 0;
+			background-repeat: no-repeat;
+		}
+
+		.country_flag .flag.flag-ae {
+			background-position: -32px 0
+		}
+
+		.country_flag .flag.flag-bh {
+			background-position: -64px 0
+		}
+
+		.country_flag .flag.flag-eg {
+			background-position: -96px 0
+		}
+
+		.country_flag .flag.flag-iq {
+			background-position: 0 -32px
+		}
+
+		.country_flag .flag.flag-jo {
+			background-position: -32px -32px
+		}
+
+		.country_flag .flag.flag-kw {
+			background-position: -64px -32px
+		}
+
+		.country_flag .flag.flag-lb {
+			background-position: -96px -32px
+		}
+
+		.country_flag .flag.flag-qa {
+			background-position: 0 -64px
+		}
+
+		.country_flag .flag.flag-sa {
+			background-position: -32px -64px
+		}
+
+		.country_flag .flag.flag-no {
+			background-position: -64px -64px
+		}
+
+		/**********/
+
+		/****PRE OPERATOR STYLE*****/
+
+		.whiteOperator {
+			background: #fff;
+			width: 100px;
+			height: 50px;
+			border: 0px;
+			color: #000;
+			border-bottom: 4px solid #ccc;
+			border-right: 4px solid #ccc;
+			border-radius: 10px;
+			font-size: 1.2em;
+			text-transform: uppercase;
+			line-height: 3em;
+			cursor: pointer;
+			text-align: center;
+			font-weight: 600;
+		}
+
+		/***************************/
+
+		/************************* Popup Error Styles ***************************/
+		.popUpError {
+			opacity: 1;
+			filter: alpha(opacity=100);
+			letter-spacing: .03em;
+			line-height: 1.3em;
+			width: 100%;
+			min-height: 140px;
+			max-width: 640px;
+			margin: 10px auto;
+			position: absolute;
+			top: 25%;
+			left: 25%;
+			display: none;
+		}
+
+		.popUpError .peWrapper {
+			border-radius: 10px;
+			padding-left: 0;
+			padding-right: 0;
+			min-height: 200px;
+			background-color: #424141;
+		}
+
+		#Operator .popUpError[data-popup-type="POPUP_ERROR"] .peWrapper {
+			min-height: 250px;
+		}
+
+		.popUpError .peInnerWrapper {
+			padding: 0;
+			/* margin-bottom: 65px; */
+			margin-bottom: 25px;
+		}
+
+		.popUpError .peTitleWrapper {
+			background-color: #ff3d3d;
+			width: 100%;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+			padding-top: 3px;
+			padding-bottom: 3px;
+			border-bottom: 1px solid #fff;
+		}
+
+		.popUpError .peTitle {
+			color: #fff;
+			font-weight: 700;
+			font-size: 1.3em;
+			line-height: 30px;
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		.popUpError .close_btn {
+			position: absolute;
+			width: 15px;
+			height: 15px;
+			top: 11px;
+			right: 11px;
+			cursor: pointer;
+		}
+
+		.popUpError .close_btn div {
+			background-position: 0 0;
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 100%;
+			max-width: 100%;
+			height: 100%;
+		}
+
+		.popUpError .peMessageWrapper {
+			margin-top: 1.5em;
+		}
+
+		.popUpError .peMessage {
+			font-size: 1.4em;
+			text-align: left;
+			line-height: 30px;
+			position: relative;
+			color: #d6d6d6;
+		}
+
+		.popUpError[data-popup-type="POPUP_ERROR"] .peMessage,
+		.popUpError[data-popup-type="POPUP_INFO"] .peMessage {
+			width: 100%;
+			text-align: center;
+		}
+
+		.popUpError .peIcon {
+			display: none;
+			padding: 0;
+		}
+
+		.popUpError[data-popup-type="POPUP_CONFIRMATION"] .peIcon {
+			display: block;
+		}
+
+		.popUpError .peIcon .operatorLogo img,
+		.preOp_wrp .peIcon .operatorLogo img {
+			border-radius: 8px;
+		}
+
+		.popUpError .extra {
+			display: none;
+		}
+
+		#Operator .popUpError[data-popup-type="POPUP_ERROR"] .extra {
+			display: block;
+		}
+
+		.popUpError .operator-wrapper,
+		.preOp_wrp .operator-wrapper {
+			display: table;
+			margin: auto;
+		}
+
+		.popUpError .operator-wrapper .availableOperators,
+		.preOp_wrp .operator-wrapper .availableOperators {
+			display: inline-table;
+			margin: 20px 10px;
+		}
+
+		.popUpError .operator-wrapper .availableOperators a,
+		.preOp_wrp .operator-wrapper .availableOperators a {
+			display: block;
+		}
+
+		.popUpError .operator-wrapper .availableOperators img,
+		.preOp_wrp .operator-wrapper .availableOperators img {
+			width: 100px;
+			height: 100px;
+			border-radius: 8px;
+		}
+
+		.popUpError .peClose {
+			position: absolute;
+			bottom: 25px;
+			padding: 0;
+			display: none;
+		}
+
+		.popUpError .peClose div {
+			cursor: pointer;
+		}
+
+		.popUpError[data-popup-showCloseButton="true"] .peClose {
+			display: block;
+		}
+
+		.popUpError .peClose div {
+			padding: 9px;
+			text-align: center;
+			text-transform: uppercase;
+			border-radius: 6px;
+			margin: 0 auto;
+			max-width: 100%;
+			margin-left: 37.5%;
+			margin-right: 37.5%;
+			font-weight: 700;
+			background-color: #ff3d3d;
+			color: #d6d6d6;
+		}
+
+		.popUpError .peButtonWrapper {
+			position: relative;
+			bottom: 25px;
+			padding: 0;
+			display: none;
+		}
+
+		.popUpError .peButtonWrapper .peButtonInnerWrapper {
+			position: relative;
+			margin: 0 auto;
+			width: 60%;
+			display: table;
+		}
+
+		.popUpError[data-popup-type="POPUP_CONFIRMATION"] .peButtonWrapper {
+			display: block;
+		}
+
+		.popUpError .peButton {
+			/* width: 42%; */
+			width: 100%;
+			text-align: center;
+			color: #fff;
+			background-color: #332f29;
+			border-radius: 11px;
+			/* padding: 11px; */
+			padding: 15px;
+			font-size: 1.5em;
+			font-weight: 900;
+			font-family: 'Elsie';
+			cursor: pointer;
+			display: block;
+			/* margin-left: 8%; */
+		}
+
+		.popUpError .peButton.cancelBtn {
+			display: none;
+		}
+
+		body.popitError {
+			overflow: hidden;
+		}
+
+		.popitError .popUpError,
+		.popitError .opaque {
+			display: block;
+		}
+
+		.popUpError[data-popup-type="POPUP_CONFIRMATION"] .peTitleWrapper {
+			background-color: #14b737;
+		}
+
+		.popUpError[data-popup-type="POPUP_CONFIRMATION"] .peButton.okBtn {
+			background-color: #14b737;
+		}
+
+		.popUpError[data-popup-type="POPUP_INFO"] .peTitleWrapper {
+			background-color: #dea609;
+			color: #000;
+		}
+
+		.popUpError[data-popup-type="POPUP_INFO"] .peClose div {
+			background-color: #dea609;
+			color: #000;
+		}
+
+		/*************************************************************************/
+		iframe[name="google_conversion_frame"] {
+			position: absolute;
+		}
+
+		.ad_slot {
+			background-color: #d8d8d9;
+			width: 100%;
+			height: auto;
+			text-align: center;
+			padding-bottom: 100px;
+		}
+
+		@media (orientation: portrait) {
+			.ad_slot {
+				padding-bottom: 100px;
+			}
+
+			.preOp_wrp .operator-wrapper .availableOperators img {
+				width: 75px;
+				height: 75px;
+			}
+
+			.preOp_wrp .operator-wrapper .availableOperators {
+				margin: 20px 5px;
+			}
+		}
+
+		/************************ end of common.css ******************************/
+		/************************ layout.css ******************************/
+		html,
+		body {
+			background-size: cover;
+			width: 100%;
+			max-width: 100%;
+			height: 100%;
+			min-height: 100%;
+			/* height: auto; */
+		}
+
+		/* html, body[id = 'PinNumber']  { */
+		/* height: 0; */
+		/* } */
+
+		.allow-popup #subscriptions {
+			position: relative;
+			inset: 0;
+			width: 100%;
+			height: 100%;
+			max-width: 640px;
+			display: none;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.otp_popup_invideo.allow-popup #subscriptions {
+			height: inherit;
+		}
+
+		.allow-popup #subscriptions .overlay {
+			position: fixed;
+			display: none;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: 0 auto;
+			padding: 0 1rem;
+			align-items: start;
+			background-color: rgba(0, 0, 0, .88);
+			-webkit-backdrop-filter: blur(0.25rem);
+			backdrop-filter: blur(0.25rem);
+			box-sizing: border-box;
+			justify-content: center;
+			z-index: 1;
+		}
+
+		.otp_popup_invideo.allow-popup #subscriptions .overlay {
+			background-color: rgba(0, 0, 0, 0);
+			-webkit-backdrop-filter: none;
+			backdrop-filter: none;
+		}
+
+		body.allow-popup.show-number-entry #subscriptions,
+		body.allow-popup.show-number-entry #subscriptions .overlay {
+			display: block;
+			position: absolute;
+		}
+
+		.game-banner {
+			margin: 0 auto;
+			text-align: center;
+			padding-top: 20px;
+		}
+
+		.game-banner>img {
+			width: 100%;
+			height: 100%;
+			max-width: 100%;
+			border-radius: 21px;
+		}
+
+		.content {
+			position: relative;
+			max-width: 640px;
+			width: 100%;
+			height: auto;
+			margin: 0 auto;
+		}
+
+		.serviceName {
+			color: #361A73;
+			font-size: 12px;
+			font-weight: bold;
+			text-align: center;
+			margin: 5px auto;
+			display: none;
+		}
+
+		.serviceLogo {
+			width: 80%;
+			margin: 0 10%;
+			text-align: center;
+			margin-top: 10px;
+			display: none;
+		}
+
+		.serviceLogo>img {
+			width: calc(16vw);
+			max-width: 100%;
+			height: calc(16vw*22/199);
+		}
+
+		.cp-banner {
+			width: 100%;
+			margin: 0 auto;
+			text-align: center;
+		}
+
+		.cp-banner>img {
+			width: calc(40vw);
+			max-width: 100%;
+			height: calc(40vw*375/666);
+		}
+
+		.cp-banner>div {
+			display: none;
+			margin: 15px auto;
+		}
+
+		.cp-banner>div>span {
+			background-color: red;
+			color: white;
+			border-radius: 30px;
+			padding: 15px 100px;
+			font-weight: bold;
+			font-size: 2.2em;
+		}
+
+		.otp_popup_invideo .cp-banner>img {
+			min-width: 500px;
+			height: auto;
+		}
+
+		.allow-popup .cp-banner {
+			cursor: pointer;
+		}
+
+		.show-number-entry .cp-banner>div>span {
+			background-color: #fefefe;
+			color: #cecece;
+		}
+
+		.lang {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			background-position: 0px 0px;
+			cursor: pointer;
+			width: 40px;
+			height: 260px;
+			display: block;
+			margin: 0 auto;
+			transform: rotate(55deg) translateX(-82px) translateY(-73px);
+			text-decoration: none;
+		}
+
+		.lang div {
+			width: 292px;
+			height: 42px;
+			display: block;
+			transform: rotate(-91deg) translateY(-122px) translateX(-113px);
+			text-align: center;
+			font-size: 1.8em;
+			cursor: pointer;
+		}
+
+		.lang:hover {
+			text-decoration: none;
+		}
+
+		.ar .lang div {
+			transform: rotate(-91deg) translateY(126px) translateX(-113px);
+		}
+
+		.title {
+			padding: 0;
+			height: auto;
+			margin: 15px auto;
+			font-size: 20px;
+			text-align: center;
+			font-size: 2em;
+			display: none;
+		}
+
+		.ar .title {
+			padding-top: 24px;
+			padding-bottom: 24px;
+			margin: 0 auto;
+		}
+
+		.container {
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+			left: auto;
+			position: relative;
+			top: auto;
+			height: 100%;
+		}
+
+		.select {
+			position: relative;
+			height: 50px;
+			width: 100%;
+			top: auto;
+			margin: 0px auto 0px;
+			padding: 0;
+			border-radius: 10px;
+			box-shadow: 1px 1px 30px #fff;
+			font-size: 125%;
+		}
+
+		.select input {
+			border: 0 none;
+			width: 78%;
+			margin: 0 auto;
+			position: absolute;
+			height: 100%;
+			top: auto;
+			text-align: center;
+			text-transform: uppercase;
+			width: 100%;
+		}
+
+		.select input:focus::-webkit-input-placeholder {
+			color: transparent;
+		}
+
+		.ar .select input {
+			left: auto;
+		}
+
+		#Register .select input {
+			width: 100%;
+			height: 100%;
+			border: 0 none;
+			border-radius: 10px;
+			position: relative;
+			top: auto;
+			left: auto;
+			margin: 0;
+			padding: 0 15px;
+		}
+
+		.operatorSelect {
+			display: none;
+		}
+
+		.operatorSelect select {
+			display: block;
+			width: 100%;
+			height: 100%;
+			border: 0 none;
+			border-radius: 10px;
+			text-align: center;
+			text-align-last: center;
+			padding: 0 15px;
+			text-transform: uppercase;
+			background-color: transparent;
+			/*For android native user-agen select auto added*/
+		}
+
+		#Register.ShowOperator .operatorSelect {
+			display: block;
+		}
+
+		.register {
+			cursor: pointer;
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+			left: auto;
+			position: relative;
+			top: auto;
+			margin-top: 6px;
+			height: 80px;
+			padding: 0px;
+		}
+
+		.register .bgbtn {
+			border-radius: 10px;
+			text-align: center;
+			display: block;
+			position: relative;
+			padding: 14px 0;
+			height: auto;
+			width: 100%;
+			margin: 0 auto;
+			font-size: 25px;
+			font-weight: 100;
+		}
+
+		#MO .cp-banner {
+			margin: 50px auto;
+		}
+
+		.ad_slot {
+			padding: 10px 0;
+		}
+
+		@media (orientation: portrait) {
+			.availableOperators img {
+				width: 50px;
+				height: 50px;
+			}
+
+			.cp-banner>img {
+				width: 53%;
+				max-width: 100%;
+			}
+
+			.title {
+				font-size: 19px;
+				width: 80%;
+			}
+
+			.content {
+				padding-top: 0%;
+			}
+
+			#PinNumber .content {
+				padding-top: 10%;
+			}
+
+			.game-banner img {
+				width: 60%;
+				height: 60%;
+				max-width: 60%;
+				border-radius: 21px;
+			}
+
+			#footer {
+				margin-top: 10px;
+				font-size: 11px;
+			}
+
+			.ad_slot {
+				padding-top: 10px;
+			}
+		}
+
+		@media (orientation: landscape) {
+			.content {
+				padding-top: 1%;
+			}
+
+			#PinNumber .content {
+				padding-top: 0%;
+			}
+		}
+
+		.preop .whiteOperator {
+			color: #fff;
+		}
+
+		.preop .operator-wrapper {
+			width: 100%;
+		}
+
+		.preop .availableOperators {
+			width: 100%;
+		}
+
+		.preop .availableOperators a {
+			width: 100%;
+		}
+
+		.preop .whiteOperator {
+			width: 100%;
+			color: #fff;
+			background: #37ab05;
+			border-bottom: 4px solid #37ab05;
+			border-right: 4px solid #37ab05;
+		}
+
+		/* .pulse { */
+		/* animation: pulse 1s infinite; */
+		/* } */
+
+		.pulse1 {
+			animation: pulse 1s infinite;
+		}
+
+		@keyframes pulse {
+			from {
+				transform: scale(1);
+			}
+
+			50% {
+				transform: scale(0.85);
+			}
+
+			to {
+				transform: scale(1);
+			}
+		}
+
+		#operatorGroup {
+			width: 100%;
+			height: 40px;
+			cursor: pointer;
+			border-top: 1px solid;
+			padding-top: 10px;
+		}
+
+		.chooseOperator {
+			font-size: 18px;
+			text-align: center;
+			padding-bottom: 10px;
+			color: inherit;
+		}
+
+		#operatorGroup input {
+			cursor: pointer;
+			display: none;
+		}
+
+		#operatorGroup div {
+			padding: 5px 0px;
+			margin-bottom: 15px;
+		}
+
+		#operatorGroup span {
+			padding: 0;
+			padding-left: 3px;
+			color: #000;
+			border-radius: 10px;
+			font-size: 1em;
+			text-transform: uppercase;
+			cursor: pointer;
+			text-align: center;
+			font-weight: 600;
+			height: 2.3em;
+			line-height: 2.3em;
+			background: linear-gradient(to bottom, #c0bdbd 0%, #e2e0e0 100%);
+			border: 1px solid #c9c8c8;
+			-webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, .2);
+			box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, .2);
+		}
+
+		#PinNumber .select {
+			padding-top: 5px;
+		}
+
+		/************************ end of layout.css ******************************/
+		html,
+		body {
+			background-size: cover;
+			width: 100%;
+			max-width: 100%;
+		}
+
+		html,
+		body[id='PinNumber'] {
+			height: 0;
+		}
+
+		/* #PinNumber #footer { */
+		/* margin-top: -15px; */
+		/* } */
+		.game-banner {
+
+			margin: 0 auto;
+			text-align: center;
+			padding-top: 20px;
+		}
+
+		.game-banner>img {
+			width: 100%;
+			height: 100%;
+			max-width: 100%;
+			border-radius: 21px;
+		}
+
+		.content {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			margin: 0 auto;
+			margin-top: 0%;
+		}
+
+		.cp-banner {
+			width: 100%;
+			margin: 2em auto !important;
+			text-align: center;
+			padding: 0px;
+		}
+
+		.otp_popup_invideo .cp-banner {
+			margin: 1em auto;
+		}
+
+		.lang {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			background-position: 0px 0px;
+			cursor: pointer;
+			width: 42px;
+			height: 292px;
+			display: block;
+			margin: 0 auto;
+			transform: rotate(52deg) translateX(-74px) translateY(-74px);
+			text-decoration: none;
+		}
+
+		.lang div {
+			width: 292px;
+			height: 42px;
+			display: block;
+			transform: rotate(-91deg) translateY(-122px) translateX(-113px);
+			text-align: center;
+			font-size: 1.8em;
+			cursor: pointer;
+		}
+
+		.lang:hover {
+			text-decoration: none;
+		}
+
+		.ar .lang div {
+			transform: rotate(-91deg) translateY(126px) translateX(-113px);
+		}
+
+		.title {
+			padding: 0;
+			height: auto;
+			margin: 0px auto;
+			font-size: 20px;
+			text-align: center;
+			font-size: 1.2em;
+			color: #000;
+			background: #fff;
+		}
+
+		.ar .title {
+			padding-top: 24px;
+			padding-bottom: 24px;
+			margin: 0 auto;
+		}
+
+		.ar .title,
+		.ar .subtitle,
+		.ar .subtitle2 {
+			direction: rtl;
+		}
+
+		.container {
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+			left: auto;
+			position: relative;
+			top: auto;
+			height: 100%;
+		}
+
+		.select {
+			position: relative;
+			height: 50px;
+			width: 100%;
+			top: auto;
+			margin: 0px auto 0px;
+			padding: 0;
+			border-radius: 10px;
+			box-shadow: 1px 1px 30px #fff;
+			font-size: 120%;
+		}
+
+		.select input {
+			border: 0 none;
+			width: 78%;
+			margin: 0 auto;
+			position: absolute;
+			height: 100%;
+			top: auto;
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		.select input:focus::-webkit-input-placeholder {
+			color: transparent;
+		}
+
+		.ar .select input {
+			left: auto;
+		}
+
+		#Register .select input {
+			width: 100%;
+			height: 100%;
+			border: 0 none;
+			border-radius: 10px;
+			position: relative;
+			top: auto;
+			left: auto;
+			margin: 0;
+			padding: 0 0px;
+		}
+
+		.operatorSelect {
+			display: none;
+		}
+
+		.operatorSelect select {
+			display: block;
+			width: 100%;
+			height: 100%;
+			border: 0 none;
+			border-radius: 10px;
+			text-align: center;
+			text-align-last: center;
+			padding: 0 15px;
+			text-transform: uppercase;
+			background-color: transparent;
+			/*For android native user-agen select auto added*/
+		}
+
+		.TC {
+			margin: 0px 5px;
+			font-size: 12px;
+			font-weight: 500;
+			line-height: 30px;
+		}
+
+		.ChBox {
+			margin-top: 0 !important;
+		}
+
+		#Register.ShowOperator .operatorSelect {
+			display: block;
+		}
+
+		.register {
+			cursor: pointer;
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+			left: auto;
+			position: relative;
+			top: auto;
+			margin-top: 6px;
+			height: 80px;
+
+		}
+
+		.register .bgbtn {
+			border-radius: 10px;
+			text-align: center;
+			display: block;
+			position: relative;
+			padding: 14px 0;
+			height: auto;
+			width: 100%;
+			margin: 0 auto;
+			font-size: 30px;
+			font-weight: 100;
+		}
+
+		#MO .cp-banner {
+			margin: 50px auto;
+		}
+
+		.ad_slot {
+			padding: 10px 0;
+		}
+
+		@media (orientation: portrait) {
+			.availableOperators img {
+				width: 50px;
+				height: 50px;
+			}
+
+			#subscriptions {
+				padding: 0;
+			}
+
+			.serviceLogo>img {
+				width: 50vw;
+				height: calc(50vw*58/244);
+			}
+
+			.cp-banner {
+				margin: 5em 0 !important;
+			}
+
+			.cp-banner>img {
+				width: calc(100vw - 10px);
+				max-width: 100%;
+				margin: 15px auto;
+				height: calc((100vw - 10px)*375/666);
+			}
+
+			.otp_popup_invideo .cp-banner>img {
+				max-width: 500px;
+				height: auto;
+				min-width: unset;
+			}
+
+			.title {
+				font-size: 19px;
+				width: 100%;
+			}
+
+			.content {
+				padding-top: 0%;
+			}
+
+			#PinNumber .content {
+				padding-top: 39%;
+			}
+
+			.game-banner img {
+				width: 90%;
+				height: 90%;
+				max-width: 90%;
+				border-radius: 21px;
+			}
+
+			#footer {
+				margin-top: 10px;
+			}
+
+			.ad_slot {
+				padding-top: 10px;
+			}
+		}
+
+		@media (orientation: landscape) {
+			.content {
+				padding-top: 0%;
+			}
+
+			#PinNumber .content {
+				padding-top: 10%;
+			}
+		}
+
+		#PinValSec {
+			display: none;
+			box-shadow: 0px 0px 0px 5px #434b5e85;
+			max-width: 640px;
+		}
+
+		.otp_popup_invideo #PinValSec {
+			box-shadow: none;
+			max-width: 450px;
+		}
+
+		#thankYouSec {
+			display: none;
+			width: 95%;
+			max-width: 640px;
+			margin: auto;
+			border-radius: 5px;
+			box-shadow: 0px 0px 0px 5px #434b5e85;
+			clear: both;
+			background-color: #fff;
+		}
+
+		.otp_popup_invideo #thankYouSec {
+			max-width: 450px;
+			margin: 160px auto;
+			border-radius: 0px;
+			box-shadow: none;
+			background-color: #000;
+		}
+
+		#PinReqSec {
+			clear: both;
+			width: 95%;
+			max-width: 640px;
+			background: #fff;
+			display: none;
+			margin: auto;
+			border-radius: 5px;
+			box-shadow: 0px 0px 0px 5px #434b5e85;
+		}
+
+		.otp_popup_invideo #PinReqSec {
+			clear: both;
+			width: 95%;
+			max-width: 450px;
+			background: #000;
+			display: none;
+			margin: 160px auto;
+			border-radius: 0px;
+			box-shadow: none;
+		}
+
+		#PinValSec {
+			clear: both;
+			width: 95%;
+			background: #fff;
+			margin: auto;
+			border-radius: 5px;
+		}
+
+		.otp_popup_invideo #PinValSec {
+			clear: both;
+			width: 95%;
+			background: #000;
+			margin: 160px auto;
+			border-radius: 0px;
+		}
+
+		.input-group-text {
+			text-align: center;
+			padding-top: 2px;
+			height: 100%;
+		}
+
+		#PinReqSec .input-group-text img {
+			width: 35px;
+			top: 0px;
+		}
+
+		.input-group-text img {
+			width: 50%;
+			position: relative;
+			top: 7px;
+		}
+
+		.input-group-prepend {
+			width: 30%;
+			float: left;
+			height: 100%;
+		}
+
+		.input-group {
+			margin: auto;
+			height: 35px;
+			background-color: white;
+			padding: 1%;
+			width: 90%;
+			border: 2px solid rgb(54, 26, 115);
+			border-radius: 15px;
+		}
+
+		#msisdnFieldWrapper input {
+			width: 70%;
+			border: 0px;
+			font-size: 20px;
+			font-weight: bold;
+			height: auto;
+			line-height: 35px;
+			/*height:100%;*/
+		}
+
+		#pinFieldWrapper input {
+			width: 70%;
+			border: 0px;
+			height: auto;
+			line-height: 35px;
+		}
+
+		.message {
+			text-align: center;
+			color: red;
+			padding: 5px;
+		}
+
+		.subtitle,
+		.subtitle2 {
+			width: 90%;
+			margin: auto;
+			color: #000;
+			text-align: center;
+			font-size: 14px;
+			font-weight: bold;
+			padding-top: 10px
+		}
+
+		.subtitle2 {
+			display: flex !important;
+
+			justify-content: center;
+			align-items: center;
+		}
+		
+
+		.otp_popup_invideo .subtitle,
+		.otp_popup_invideo .subtitle2 {
+			width: 90%;
+			color: #ffffff;
+			font-size: 18px;
+		}
+
+		.btnSection {
+			text-align: center;
+			margin-bottom: 20px;
+		}
+
+		.btnSection div {
+			width: 100%;
+			padding-bottom: 10px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.otp_popup_invideo .btnSection div {
+			width: 75%;
+		}
+
+		#tryAgain .btnSection div {
+			padding-bottom: 20px;
+		}
+
+		#msisdnButton {
+			width: 90%;
+			line-height: 40px;
+			border-radius: 15px;
+			padding: 0;
+			color: white !important;
+			background-color: rgb(54, 26, 115) !important;
+			border: 0px;
+			height: fit-content;
+			padding: 10px 0;
+			filter: drop-shadow(1px 3px 1px black);
+		}
+
+		.otp_popup_invideo #msisdnButton {
+			background-color: #fff;
+			/* background-image: -webkit-gradient(linear, left top, left bottom, from(#b54d4d), to(#7c0000));*/
+			/* background-image: linear-gradient(#b54d4d, #7c0000);*/
+			color: #fff;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			margin: 10px auto;
+			border: none;
+			width: 100%;
+			text-transform: uppercase;
+			border-radius: 10px;
+		}
+
+		#msisdnButton>span {
+			font-weight: 500;
+			font-size: 18px;
+		}
+
+		#pinForm .submitNumberBtn {
+			width: 100%;
+			line-height: 65px;
+			border-radius: 0;
+			padding: 0;
+			color: #0f9237
+		}
+
+		.otp_popup_invideo #pinForm .submitNumberBtn {
+			border-radius: 15px;
+			background-color: #fff;
+		}
+
+		#pinForm .submitNumberBtn>span {
+			width: 30%;
+			display: block;
+			height: 100%;
+			float: right;
+			border-left: 2px solid black;
+		}
+
+		.btnSection .btn:hover {
+			background-color: #fff
+		}
+
+		.blink-1 {
+			animation: blink-1 2.5s ease-in-out infinite both;
+			font-size: 40px;
+			position: relative;
+		}
+
+		@-webkit-keyframes blink-1 {
+
+			0%,
+			50%,
+			100% {
+				opacity: 1
+			}
+
+			25%,
+			75% {
+				opacity: 0
+			}
+		}
+
+		@keyframes blink-1 {
+
+			0%,
+			50%,
+			100% {
+				opacity: 1
+			}
+
+			25%,
+			75% {
+				opacity: 0
+			}
+		}
+
+		.btn {
+			background-color: transparent;
+			border: 2px solid #fff;
+			border-color: #000;
+			color: #000;
+			font-size: 25px;
+			font-weight: 800;
+			height: 75px;
+			line-height: 1;
+			margin-top: 10px;
+			min-height: 3rem;
+			padding: 5px 10px;
+			box-shadow: 0px 2.5px 5px 0px #737373;
+			transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+		}
+
+		.otp_popup_invideo .btn {
+			box-shadow: none;
+			height: 65px;
+		}
+
+		.otp_popup_invideo .blink-1 {
+			line-height: 55px;
+		}
+
+		#footer {
+			margin-top: 100px;
+			color: #361A73;
+		}
+
+		.pinForm {
+			background-color: #fff;
+		}
+
+		.content-center {
+			text-align: center;
+			color: #000;
+		}
+
+		.otp_popup_invideo .content-center {
+			color: #fff;
+		}
+
+		.content-center div {
+			padding: 10px;
+			padding-bottom: 20px;
+			font-size: 20px;
+		}
+
+		/* .languageBtn{position:absolute;top:0px;z-index:1} */
+		.langBtn {
+			color: #fff;
+			font-size: 14px;
+			padding: 3px;
+			background-color: grey;
+		}
+
+		#timerpin {
+			width: 100%
+		}
+
+		#timerpin span {
+			font-weight: bold;
+			font-size: 18px;
+		}
+
+		@media screen and (max-width:700px) {}
+
+		.pinsubtitle {
+			width: 90%;
+			margin: auto;
+			color: #000;
+			text-align: center;
+			font-size: 12px;
+			font-weight: bold;
+			padding-top: 10px;
+		}
+
+		.otp_popup_invideo .pinsubtitle {
+			color: ffffff;
+		}
+
+		.image {
+			width: 100%;
+			margin: auto;
+			max-width: 550px;
+			height: 300px;
+			background-size: cover;
+			left: 0;
+			right: 0;
+			background-repeat: no-repeat;
+		}
+
+		.lang-ar {
+			direction: rtl;
+		}
+
+		.bgfooter>ul {
+			margin-block-start: 0;
+			margin-block-end: 0;
+			margin-inline-start: 0px;
+			margin-inline-end: 0px;
+			padding-inline-start: 0;
+		}
+
+		.logofooter {
+			width: 200px;
+			margin: auto;
+		}
+
+		.logofooter img {
+			width: 100%;
+		}
+
+		#tryAgain {
+			display: none;
+			width: 95%;
+			margin: auto;
+			max-width: 640px;
+			border-radius: 5px;
+			box-shadow: 0px 0px 0px 5px #434b5e85;
+			clear: both;
+			background: #000
+		}
+
+		.otp_popup_invideo #tryAgain {
+			margin: 160px auto;
+			max-width: 450px;
+			border-radius: 0;
+			box-shadow: none;
+			background: #fff
+		}
+
+		#tryagainbutton {
+			width: 70%;
+			border-radius: 0;
+			padding: 10px;
+			color: #0f9237
+		}
+
+		.otp_popup_invideo #tryagainbutton {
+			border-radius: 15px;
+		}
+
+		#tryagainArrow {
+			width: 30%;
+			border-radius: 0;
+			padding: 10px;
+			color: #0f9237
+		}
+
+		.exit-btn>div {
+			width: 50px;
+			height: 30px;
+			font-size: 12px;
+			text-decoration: none;
+			color: #fff;
+			border-radius: 3px;
+			display: none;
+			margin: 0px auto 0px auto;
+			text-align: center;
+			opacity: 0.7;
+			text-align: center;
+			background-color: #212529;
+			border-color: #212529;
+			cursor: pointer;
+			padding-top: 6px;
+			border: 1px solid #fff;
+		}
+
+		.exit-btn.show>div {
+			display: block;
+			margin: 15px auto;
+		}
+
+		.otp_popup_invideo .input-group {
+			background-color: #f1f1f1;
+			border: 2px solid #ff9800;
+			border-radius: 12px;
+			width: 75%;
+		}
+
+		@media (max-width: 1280px) {
+
+			.otp_popup_invideo #PinReqSec,
+			.otp_popup_invideo #PinValSec,
+			.otp_popup_invideo #thankYouSec,
+			.otp_popup_invideo #tryAgain {
+				margin: 200px auto;
+			}
+		}
+
+		@media (min-width: 500px) and (max-width: 1280px) {
+
+			.otp_popup_invideo #PinReqSec,
+			.otp_popup_invideo #PinValSec,
+			.otp_popup_invideo #thankYouSec,
+			.otp_popup_invideo #tryAgain {
+				margin: 160px auto;
+			}
+
+			.otp_popup_invideo .btn,
+			.otp_popup_invideo #msisdnButton,
+			.otp_popup_invideo #pinForm .submitNumberBtn {
+				height: 50px;
+				line-height: 45px
+			}
+
+			.otp_popup_invideo .blink-1 {
+				line-height: 35px;
+			}
+		}
+
+		@media (max-width: 500px) {
+			.cp-banner>div>span {
+				padding: 5px 30px;
+			}
+
+			.otp_popup_invideo #PinReqSec,
+			.otp_popup_invideo #PinValSec,
+			.otp_popup_invideo #thankYouSec,
+			.otp_popup_invideo #tryAgain {
+				margin: calc(25vw) auto;
+			}
+
+			/* .otp_popup_invideo #PinValSec {
+				 margin: calc(15vw) auto;
+				
+			}*/
+
+			/*.otp_popup_invideo .subtitle,
+			.otp_popup_invideo .subtitle2 {
+				 font-size: 12px;
+		
+			}
+			*/
+		}
+
+		@media (min-height: 770px) and (max-width: 360px) {
+			/*.otp_popup_invideo.allow-popup #footer {
+				position: absolute;
+			}
+			*/
+		}
+	</style>
+	<script>
+		var DEFAULT_LANG = 'ar';
+		var RESOURCES_SERVICE_ABSOLUTE_PATH = "img/"; // This changes according to domain of LP and folder structure of LP
+		var RESOURCES_COMMON_ABSOLUTE_PATH = ""; // This changes according to domain of LP and folder structure of LP
+
+		// Service-Related Images
+		var APPLY_BACKGROUND_IMAGE = false;
+		var SHOW_SERVICE_LOGO = false;
+		var SHOW_SERVICE_LOGO_IN_FOOTER = false;
+		var SHOW_SERVICE_NAME = true;
+		var SHOW_SERVICE_NAME_IN_FOOTER = false;
+		var SHOW_TITLE_ABOVE_SUBSCRIPTION_BOX = false;
+		var SHOW_SUBTITLE_IN_SUBSCRIPTION_BOX = true;
+		var SHOW_SUBTITLE_IN_SUBSCRIPTION_BOX_FOOTER = true;
+		var SHOW_BANNER_CTA_BTN = false;
+		var SHOW_EXIT_BTN = false;
+		var BACKGROUND_IMAGE_FILENAME = '';
+		var CP_BANNER_IMG_FILENAME = 'DreamBanner.png';
+		var SERVICE_LOGO_IMG_FILENAME = '';
+		var PIN_REQ_IMG_FILENAME = 'smartphone.png';
+		var PIN_VAL_IMG_FILENAME = 'stars-icon.png';
+		var ALLOW_GRADIENT_PRIMARY_COLOR = false;
+
+		// Common-Related Images
+		var LOADER_IMG_FILENAME = 'loader.gif';
+		var CLOSE_BTN_IMG_FILENAME = 'close_btn.png'
+		var FLAGS_IMG_FILENAME = 'flags.png'
+		var FAV_ICON_IMG_FILENAME = 'favicon.ico';
+
+		// Marketing Tracking & Conversion
+		var HOTJAR_ID = ''; //'400196';
+		var ADWORDS_ID = 'AW-708342528';
+		var ADWORDS_COVERSION_ID = 'AW-708342528/HVczCI3ela0BEIDm4dEC';
+		var DV360_ID = 'DC-';
+		var DV360_SRC = '12798899';
+		var DV360_TYPE = 'invmedia';
+		var DV360_CATEGORY = 'subsc00';
+		var DV360_CONVERSION_ID = ''; //DV360_ID + DV360_SRC + '/' + DV360_TYPE + '/' + DV360_CATEGORY + '+standard';
+		var GOOGLE_ANALYTICS_ID = 'UA-86554095-1';
+
+		var PAGE_TITLE = 'Dream';
+		var APPLICATION_ID = 194;
+		var COUNTRY_ID = 207;
+		var OFFER_ID = 198;
+		var CAMPAIGN_ID = 3267;
+
+		var SEND_BILLING_FREQUENCY = false;
+		var BILLING_FREQUENCY = 'DAILY'; // DAILY, WEEKLY, MONTHLY
+
+		var ENABLE_SUBSCRIPTION_POPUP = false;
+		var ALLOW_OTP_POPUP_I_VIDEO = false;
+		var REDIRECT_TO_STORE_AFTER_SUBSCRIPTION = false;
+
+		var IDEX_MCP_ANTI_FRAUD_SCRIPT_ENABLED = false;
+		var IDEX_MCP_ANTI_FRAUD_CHANNEL_ID = 0;
+
+		var EVINA_ANTI_FRAUD_SCRIPT_ENABLED = true;
+		var EVINA_APPLICATION_ID = 194;
+		var EVINA_COUNTRY_ID = 207;
+		var EVINA_CTA_BUTTON_ID = 'evina_ctabutton';
+		var EVINA_BASE_SUBDOMAIN = 'isg';
+		var EVINA_REQUEST_ID_PARAM = 'ti';
+
+		var FORCE_REDIRECT_RULES = false;
+		var REDIRECT_RULES = [
+			{
+				'Type': 'IP',
+				'Enabled': true,
+				'Operators': [8, 16],
+				'Redirect_To_Url': '',
+				'Redirect_With_QueryString': true
+			},
+			{
+				'Type': 'MSISDN',
+				'Enabled': true,
+				'Operators': [8],
+				'Redirect_To_Url': '',
+				'Redirect_With_QueryString': true
+			},
+			{
+				'Type': 'MSISDN',
+				'Enabled': true,
+				'Operators': [16],
+				'Redirect_To_Url': '',
+				'Redirect_With_QueryString': true
+			}
+		];
+
+		var FORCE_CONFIG_CHANGE_RULES = false;
+		var CONFIG_CHANGE_RULES = [
+			{
+				'Type': 'IP',
+				'Enabled': false,
+				'Operators': [],
+			},
+			{
+				'Type': 'MSISDN',
+				'Enabled': true,
+				'Operators': [{
+					'Operator_Id': 3,
+					'Application_Id': 0,
+					'Page_Title': '',
+					'Campaign_Id': 0,
+					'Idex_Mcp_Anti_Fraud_Channel_Id': 0,
+					'Send_Billing_Frequency': false,
+					'Billing_Frequency': '',
+					'Redirect_To_Store_After_Subcscription': false,
+					'Evina_Anti_Fraud_Script_Enabled': false,
+					'Translations': {}
+				},
+				{
+					'Operator_Id': 16,
+					'Application_Id': 0,
+					'Page_Title': '',
+					'Campaign_Id': 0,
+					'Idex_Mcp_Anti_Fraud_Channel_Id': 0,
+					'Send_Billing_Frequency': false,
+					'Billing_Frequency': '',
+					'Redirect_To_Store_After_Subcscription': false,
+					'Evina_Anti_Fraud_Script_Enabled': false,
+					'Translations': {}
+				},
+				{
+					'Operator_Id': 8,
+					'Application_Id': 0,
+					'Page_Title': '',
+					'Campaign_Id': 0,
+					'Idex_Mcp_Anti_Fraud_Channel_Id': 0,
+					'Send_Billing_Frequency': false,
+					'Billing_Frequency': '',
+					'Redirect_To_Store_After_Subcscription': false,
+					'Evina_Anti_Fraud_Script_Enabled': false,
+					'Translations': {}
+				}]
+			}
+		];
+
+		var TRANSLATIONS = {
+			"ar": {
+				"step1title": "لا تفوّت لعبة مع  </br>Sportworld",
+				"step1subtitle": "احصل على فرصة لتغير حياتك<br/> وتحقق أحلامك مع  حلم من MBC!",
+				"step1subtitle2": "<input type='checkbox' class='ChBox' required><label class='TC'> أوافق على الشروط والأحكام </label>",
+				"subscribe": "استمر <br/> <span> للإشتراك</span>",
+				"step2tit": "فعل حسابك",
+				"step2title": "",
+				"step3title": "جاهز، استعد، استمتع",
+				"step3subtitle": "كل محتوياتنا الآن أصبحت في متناول يديك. ابدأ المرح!",
+				"mobileNumber": "رقم الهاتف المحمول",
+				"pinError": " يرجى التأكد من رمز التحقق",
+				"pinNumber": "الرمز",
+				"confirm": "تأكيد الإشتراك",
+				"price": "",
+				"terms": "  احصل على فرصة لتغير حياتك وتحقق أحلامك مع حلم المميزة من MBC! شارك بجواهر لتربح فرص في سحوبات حلم الكبيرة، وقد تكون الرابح التالي! سيتم تحصيل 2.88 ريال سعودي / يوم (شامل ضريبة القيمة المضافة) لمستخدمي الاتصالات السعودية ، ويمكنك إلغاء الاشتراك في هذه الخدمة في أي وقت بإرسال Unsub Dream إلى 801940 <br/> بعد يوم اشتراك مجاني ، تبلغ التكلفة 2.88 ريال سعودي في اليوم (شاملة ضريبة القيمة المضافة) لمستخدمي موبايلي,يمكنك إلغاء الاشتراك في هذه الخدمة في أي وقت بإرسال Unsub Dream إلى 650444  <br/>سيتم تحصيل 2.88 ريال سعودي في اليوم (شاملة ضريبة القيمة المضافة) لمستخدمي زين,يمكنك إلغاء الاشتراك في هذه الخدمة في أي وقت بإرسال Unsub Dream إلى 705505  <br/>  <a href='https://mydream.mbc.net/terms-and-conditions'>للشروط والاحكام</a>",
+				"msisdn_error": "من فضلك تأكد من رقم الهاتف",
+				"pin_error1": "يرجى إدخال رمز دخول صحيح",
+				"pin_error2": "The PIN code must have 4 characters",
+				"pin_error3": "The PIN code must have 6 characters",
+				"msisdn_error_length": "Please lengthen this text to at least 9 characters",
+				"confirm_pin": "Confirm PIN",
+				"OK": "MSISDN OK",
+				"pin_sent": "OK",
+				"retry": "Please insert a different number",
+				"ERROR": "رقم خاطئ أو طلب غير صالح",
+				"placeholderMobile": "رقم الهاتف",
+				"placeholderPin": "رقم الرمز",
+				"exit": "خروج",
+				"banner_CTA_txt": "Watch Now"
+			},
+			"en": {
+				"step1title": "Top entertainment content.",
+				"step1subtitle": "Get a chance to change your life <br/> and fulfill your dreams with MBC DREAM! ",
+				"step1subtitle2": " <input type='checkbox' class='ChBox' required><label class='TC'> I accept and confirm the Terms and conditions </label>",
+				"subscribe": "Continue  <br/> <span>   to subscribe </span>",
+				"step2tit": "Activate your account",
+				"step2title": "The code should arrive within the next 30 seconds.</br> It was sent to 0",
+				"step3title": "Ready, Set, Enjoy",
+				"step3subtitle": "All our content is now at your fingertips, start enjoying!",
+				"mobileNumber": "Mobile Number",
+				"pinNumber": "PIN",
+				"confirm": "Confirm <span><span class='blink-1'>»</span></span>",
+				"price": "",
+				"terms": "Get a chance to change your life and fulfill your dreams with the one and only, DREAM, presented by MBC! Participate with Gems to earn Chances in the big DREAM draws, and maybe the next winner could be you!  You will be charged SAR 2.88/day (VAT included) for STC users, you can unsubscribe from this service anytime by sending Unsub Dream to 801940<br/>After 1 FREE subscription day, the cost is SAR 2.88/day (VAT included) for Mobily users, You can unsubscribe from this service anytime by sending Unsub Dream to 650444<br/>You will be charged SAR 2.88/day (VAT included) for Zain users, You can unsubscribe from this service anytime by sending Unsub Dream to 705505 <br/>  <a href='https://mydream.mbc.net/terms-and-conditions'>Terms & Conditions   </a>",
+				"msisdn_error": "Please insert a valid number",
+				"pinError": "Please insert a valid PIN",
+				"msisdn_error_length": "Please lengthen this text to at least 9 characters",
+				"pin_error1": "Please insert a valid PIN",
+				"pin_error2": "The PIN code must have 4 characters",
+				"pin_error3": "The PIN code must have 6 characters",
+				"confirm_pin": "Confirm Subscribtion",
+				"OK": "MSISDN OK",
+				"pin_sent": "OK",
+				"retry": "Please insert a different number",
+				"ERROR": "Wrong Number or invalid request",
+				"placeholderMobile": "Mobile Number",
+				"placeholderPin": "Pin number",
+				"exit": "Exit",
+				"banner_CTA_txt": "Watch Now"
+			}
+		};
+
+		var OPERATOR_ID = 0;
+		var PAGE_INDEX = 1;
+		var USER_AGENT = '';
+		var PLATFORM = '';
+		var OS = '';
+		var GCLID = '';
+		var TRANSACTION_ID = '';
+		var LANG = '';
+		var MSISDN_DETECTED_FROM_PREFIX = '';
+		var HEADERS_ENCODED_BASE64 = '';
+		var ANTI_FRAUD_ID = '';
+		var CLIENT_IP_ADDRESS = '';
+		var REFERRER_URL = '';
+		var BASE_URL = '';
+		var OTP_TIMER = null;
+	</script>
+	<script>
+		const PRIMARY_COLOR = '#361A73';
+		const SECONDARY_COLOR = '#ffffff';
+		const BACKGROUND_COLOR = '#F2D7B6';
+		const GRADIENT_PRIMARY_COLOR = 'linear-gradient(#b54d4d,#7c0000)';
+
+		const TODAY = new Date();
+		const START_TIME = TODAY.getTime();
+		const REDIRECT_RULES_COOKIE_NAME = 'R_S';
+		const RESOURCES_BASE_URL = "";
+		const IP_DETECTION_API = 'https://api.ipify.org';
+		const ANTI_FRAUD_MCP_URL = 'https://antifraud.cgparcel.net/AntiFraud/Prepare/';
+		const ANTI_FRAUD_EVINA_URL = 'https://' + EVINA_BASE_SUBDOMAIN + '.intech-mena.com/MSG/v1.1/API/GetScript';
+		const HEADERS_ENCODED_BASE64_URL = '//request.intech-mena.com';
+		const ICT_URL = '//ict.intech-mena.com/Universal/v2.0/API/Postback';
+
+		const DAILY_BILLING_PARAMTER = 'd=1';
+		const WEEKLY_BILLING_PARAMTER = 'w=7';
+
+		const COUNTRY_OPERATORS = {
+			'Country': {
+				'Id': 207,
+				'Name': {
+					'en': 'KSA',
+					'ar': 'المملكة العربية السعودية'
+				},
+				'CountryCode': '966',
+				"trunkPrefix": "0",
+				"internationalPrefix": "00",
+				"countryminlength": 9,
+				"countrymaxlength": 10,
+				"countrymaxlengthRaw": 16,
+				'Operators': {
+					'Array':
+						[
+							{
+								'Id': 3,
+								'Name': {
+									'en': 'STC KSA',
+									'ar': 'stc السعودية',
+								},
+								'Prefixes': ["500", "501", "502", "503", "504", "505", "506", "507", "508", "509",
+									"512", "514", "515", "517",
+									"530", "531", "532", "533", "534", "535", "536", "537", "538", "539",
+									"550", "551", "552", "553", "554", "555", "556", "557", "558", "559"],
+								'IP_Ranges': [
+									["5.41.1.0", "5.41.2.255"],
+									["5.41.4.0", "5.41.16.255"],
+									["5.41.20.0", "5.41.21.255"],
+									["5.41.23.0", "5.41.24.255"],
+									["5.41.26.0", "5.41.28.255"],
+									["5.41.30.0", "5.41.39.255"],
+									["5.41.41.0", "5.41.46.255"],
+									["5.41.48.0", "5.41.49.255"],
+									["5.41.51.0", "5.41.61.255"],
+									["5.41.63.0", "5.41.63.255"],
+									["5.41.65.0", "5.41.69.255"],
+									["5.41.72.0", "5.41.74.255"],
+									["5.41.76.0", "5.41.77.255"],
+									["5.41.79.0", "5.41.84.255"],
+									["5.41.86.0", "5.41.123.255"],
+									["5.41.125.0", "5.41.128.255"],
+									["5.41.130.0", "5.41.132.255"],
+									["5.41.134.0", "5.41.152.255"],
+									["5.41.154.0", "5.41.156.255"],
+									["5.41.158.0", "5.41.159.255"],
+									["5.41.162.0", "5.41.228.255"],
+									["5.41.230.0", "5.41.233.255"],
+									["5.41.235.0", "5.41.255.255"],
+									["5.156.0.0", "5.156.107.255"],
+									["5.156.109.0", "5.156.209.255"],
+									["5.156.211.0", "5.156.212.255"],
+									["5.156.214.0", "5.156.228.255"],
+									["5.156.230.0", "5.156.255.255"],
+									["37.56.36.0", "37.56.36.255"],
+									["37.107.21.0", "37.107.21.255"],
+									["37.107.177.0", "37.107.177.255"],
+									["37.224.55.0", "37.224.55.255"],
+									["37.224.128.0", "37.224.128.255"],
+									["37.224.130.0", "37.224.130.255"],
+									["37.224.132.0", "37.224.135.255"],
+									["37.224.160.0", "37.224.160.255"],
+									["37.224.164.0", "37.224.166.255"],
+									["37.224.168.0", "37.224.169.255"],
+									["37.224.171.0", "37.224.176.255"],
+									["37.224.178.0", "37.224.178.255"],
+									["37.224.181.0", "37.224.185.255"],
+									["37.224.187.0", "37.224.190.255"],
+									["37.224.200.0", "37.224.203.255"],
+									["37.224.205.0", "37.224.206.255"],
+									["37.224.224.0", "37.224.228.255"],
+									["37.224.230.0", "37.224.236.255"],
+									["37.224.240.0", "37.224.242.255"],
+									["37.224.244.0", "37.224.244.255"],
+									["37.224.246.0", "37.224.255.255"],
+									["50.60.34.0", "50.60.34.255"],
+									["50.60.201.0", "50.60.201.255"],
+									["51.223.162.0", "51.223.162.255"],
+									["51.235.28.0", "51.235.28.255"],
+									["51.252.0.0", "51.252.127.255"],
+									["51.253.0.0", "51.253.99.255"],
+									["51.253.101.0", "51.253.127.255"],
+									["77.30.184.0", "77.30.184.255"],
+									["78.95.0.0", "78.95.172.255"],
+									["78.95.174.0", "78.95.255.255"],
+									["84.235.32.0", "84.235.35.255"],
+									["84.235.72.0", "84.235.75.255"],
+									["84.235.79.0", "84.235.79.255"],
+									["93.112.147.0", "93.112.147.255"],
+									["93.112.164.0", "93.112.164.255"],
+									["93.168.0.0", "93.168.176.255"],
+									["93.168.178.0", "93.168.200.255"],
+									["93.168.202.0", "93.168.242.255"],
+									["93.168.244.0", "93.169.170.255"],
+									["93.169.172.0", "93.169.255.255"],
+									["94.96.30.0", "94.96.30.255"],
+									["94.99.107.0", "94.99.107.255"],
+									["95.184.0.0", "95.184.127.255"],
+									["95.185.0.0", "95.185.223.255"],
+									["95.186.0.0", "95.186.37.255"],
+									["95.186.39.0", "95.186.69.255"],
+									["95.186.71.0", "95.186.72.255"],
+									["95.186.74.0", "95.186.96.255"],
+									["95.186.98.0", "95.186.104.255"],
+									["95.186.106.0", "95.186.136.255"],
+									["95.186.138.0", "95.186.147.255"],
+									["95.186.149.0", "95.186.159.255"],
+									["95.187.0.0", "95.187.6.255"],
+									["95.187.8.0", "95.187.16.255"],
+									["95.187.18.0", "95.187.71.255"],
+									["95.187.73.0", "95.187.76.255"],
+									["95.187.78.0", "95.187.80.255"],
+									["95.187.82.0", "95.187.95.255"],
+									["95.187.97.0", "95.187.111.255"],
+									["95.187.113.0", "95.187.113.255"],
+									["95.187.115.0", "95.187.137.255"],
+									["95.187.139.0", "95.187.238.255"],
+									["95.187.240.0", "95.187.255.255"],
+									["95.218.137.0", "95.218.137.255"],
+									["129.208.109.0", "129.208.109.255"],
+									["130.164.172.0", "130.164.172.255"],
+									["139.64.7.0", "139.64.7.255"],
+									["139.64.10.0", "139.64.10.255"],
+									["142.154.55.0", "142.154.55.255"],
+									["142.154.120.0", "142.154.120.255"],
+									["142.247.12.0", "142.247.12.255"],
+									["142.247.28.0", "142.247.28.255"],
+									["144.86.15.0", "144.86.15.255"],
+									["145.82.192.0", "145.82.192.255"],
+									["149.109.128.0", "149.109.128.255"],
+									["149.109.139.0", "149.109.139.255"],
+									["151.254.129.0", "151.254.157.255"],
+									["151.254.159.0", "151.254.255.255"],
+									["151.255.128.0", "151.255.255.255"],
+									["155.138.105.0", "155.138.105.255"],
+									["155.138.119.0", "155.138.119.255"],
+									["159.0.0.0", "159.0.255.255"],
+									["167.86.162.0", "167.86.162.255"],
+									["168.149.17.0", "168.149.17.255"],
+									["170.133.69.0", "170.133.69.255"],
+									["176.44.127.0", "176.44.127.255"],
+									["176.45.21.0", "176.45.21.255"],
+									["176.47.0.0", "176.47.5.255"],
+									["176.47.7.0", "176.47.35.255"],
+									["176.47.37.0", "176.47.37.255"],
+									["176.47.39.0", "176.47.47.255"],
+									["176.47.49.0", "176.47.101.255"],
+									["176.47.103.0", "176.47.127.255"],
+									["178.86.0.0", "178.86.0.255"],
+									["178.86.2.0", "178.86.5.255"],
+									["178.86.7.0", "178.86.8.255"],
+									["178.86.10.0", "178.86.10.255"],
+									["178.86.13.0", "178.86.18.255"],
+									["178.86.21.0", "178.86.21.255"],
+									["178.86.23.0", "178.86.24.255"],
+									["178.86.26.0", "178.86.27.255"],
+									["178.86.29.0", "178.86.33.255"],
+									["178.86.37.0", "178.86.37.255"],
+									["178.86.40.0", "178.86.42.255"],
+									["178.86.44.0", "178.86.44.255"],
+									["178.86.46.0", "178.86.47.255"],
+									["178.86.120.0", "178.86.120.255"],
+									["185.139.8.0", "185.139.11.255"],
+									["188.48.106.0", "188.48.106.255"],
+									["188.48.114.0", "188.48.114.255"],
+									["188.48.235.0", "188.48.235.255"],
+									["188.49.68.0", "188.49.68.255"],
+									["188.50.0.0", "188.50.0.255"],
+									["188.54.62.0", "188.54.62.255"],
+									["193.42.220.0", "193.42.220.255"],
+									["212.118.154.0", "212.118.155.255"],
+									["212.215.128.0", "212.215.255.255"]
+								],
+								'PIN_CODE_LENGTH': 4,
+								'SP': {
+									'Id': 89,
+									'API': '//agg89.intech-mena.com/WAM/v1.0/API/'
+								}
+							},
+							{
+								'Id': 8,
+								'Name': {
+									'en': 'Zain Saudi Arabia',
+									'ar': 'زين السعودية',
+								},
+								'Prefixes': ["580", "581", "582", "583", "584", "585", "586", "587", "588", "589",
+									"590", "591", "592", "593", "594", "595", "596", "597", "598", "599"],
+								'IP_Ranges': [],
+								'PIN_CODE_LENGTH': 4,
+								'SP': {
+									'Id': 89,
+									'API': '//agg89.intech-mena.com/WAM/v1.0/API/'
+								}
+							},
+							{
+								'Id': 16,
+								'Name': {
+									'en': 'Mobily',
+									'ar': 'موبايلي',
+								},
+								'Prefixes': ["540", "541", "542", "543", "544", "545", "546", "547", "548", "549",
+									"560", "561", "562", "563", "564", "565", "566", "567", "568", "569"],
+								'IP_Ranges': [],
+								'PIN_CODE_LENGTH': 4,
+								'SP': {
+									'Id': 89,
+									'API': '//agg89.intech-mena.com/WAM/v1.0/API/'
+								}
+							},
+							{
+								'Id': 0,
+								'Name': {
+									'en': 'Virgin Mobile',
+									'ar': 'فيرجين موبايل',
+								},
+								'Prefixes': ["570", "571", "572", "573"],
+								'IP_Ranges': [],
+								'PIN_CODE_LENGTH': 0,
+								'SP': {
+									'Id': 0,
+									'API': '0'
+								}
+							},
+							{
+								'Id': 0,
+								'Name': {
+									'en': 'Lebara Mobile',
+									'ar': 'ليبارا موبايل',
+								},
+								'Prefixes': ["576", "577", "578"],
+								'IP_Ranges': [],
+								'PIN_CODE_LENGTH': 0,
+								'SP': {
+									'Id': 0,
+									'API': ''
+								}
+							},
+						],
+					"Operator_Prefixes": {
+						"500": "STC",
+						"501": "STC",
+						"502": "STC",
+						"503": "STC",
+						"504": "STC",
+						"505": "STC",
+						"506": "STC",
+						"507": "STC",
+						"508": "STC",
+						"509": "STC",
+						"512": "STC",
+						"514": "STC",
+						"515": "STC",
+						"517": "STC",
+						"530": "STC",
+						"531": "STC",
+						"532": "STC",
+						"533": "STC",
+						"534": "STC",
+						"535": "STC",
+						"536": "STC",
+						"537": "STC",
+						"538": "STC",
+						"539": "STC",
+
+						"540": "Mobily",
+						"541": "Mobily",
+						"542": "Mobily",
+						"543": "Mobily",
+						"544": "Mobily",
+						"545": "Mobily",
+						"546": "Mobily",
+						"547": "Mobily",
+						"548": "Mobily",
+						"549": "Mobily",
+
+						"550": "STC",
+						"551": "STC",
+						"552": "STC",
+						"553": "STC",
+						"554": "STC",
+						"555": "STC",
+						"556": "STC",
+						"557": "STC",
+						"558": "STC",
+						"559": "STC",
+
+						"560": "Mobily",
+						"561": "Mobily",
+						"562": "Mobily",
+						"563": "Mobily",
+						"564": "Mobily",
+						"565": "Mobily",
+						"566": "Mobily",
+						"567": "Mobily",
+						"568": "Mobily",
+						"569": "Mobily",
+
+
+						"570": "Virgin",
+						"571": "Virgin",
+						"572": "Virgin",
+						"573": "Virgin",
+
+						"576": "Lebara",
+						"577": "Lebara",
+						"578": "Lebara",
+
+						"580": "Zain",
+						"581": "Zain",
+						"582": "Zain",
+						"583": "Zain",
+						"584": "Zain",
+						"585": "Zain",
+						"586": "Zain",
+						"587": "Zain",
+						"588": "Zain",
+						"589": "Zain",
+
+						"590": "Zain",
+						"591": "Zain",
+						"592": "Zain",
+						"593": "Zain",
+						"594": "Zain",
+						"595": "Zain",
+						"596": "Zain",
+						"597": "Zain",
+						"598": "Zain",
+						"599": "Zain",
+					}
+				}
+			}
+		};
+
+		const events = {
+			visit: 'Visit',
+			fullLoad: 'Full Load',
+			clickMSISDN: 'MSISDN Clicked',
+			clickOperator: 'Operator Clicked',
+			submitMSISDN: 'MSISDN Submitted',
+			validatedMSISDN: 'MSISDN Valid',
+			clickPIN: 'PIN Clicked',
+			submitPIN: 'PIN Submitted',
+			validatedPIN: 'PIN Valid',
+			ctaClick: 'CTA clicked',
+			click2sms: 'Click2SMS CTA',
+			subscription: 'Subscribed to Services',
+			invalidOperator: 'Invalid Operator',
+			inputClickMSISDN: 'Clicked MSISDN input',
+			ctaClickMSISDN: 'Clicked CTA MSISDN',
+			inputClickPIN: 'Clicked PIN input',
+			ctaClickPIN: 'Clicked CTA PIN',
+			msisdnAttempt: "MSISDN Attempt",
+			pinAttempt: "PIN Attempt",
+			default_language: '',
+			chooseLanguage: '',
+			identifiedOperator: '',
+			welcomeService: "Welcome Service",
+		};
+
+		const macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'];
+		const windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'];
+		const iosPlatforms = ['iPhone', 'iPad', 'iPod'];
+	</script>
+	<script>
+		var head = document.getElementsByTagName('head')[0] || document.documentElement;
+
+		if (HOTJAR_ID.length > 0) {
+			var HOTJAR_Script = document.createElement('script');
+			HOTJAR_Script.append("(function(h,o,t,j,a,r){h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};h._hjSettings={hjid:" + HOTJAR_ID + ",hjsv:6};a=o.getElementsByTagName('head')[0];r=o.createElement('script');r.async=1;r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;a.appendChild(r);})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');");
+			head.appendChild(HOTJAR_Script);
+		}
+
+		if (ADWORDS_ID.length > 0) {
+			var GAdwords_script = document.createElement('script');
+			GAdwords_script.setAttribute('async', '');
+			GAdwords_script.src = "https://www.googletagmanager.com/gtag/js?id=" + ADWORDS_ID;
+			head.appendChild(GAdwords_script);
+		}
+
+		if (GOOGLE_ANALYTICS_ID.length > 0) {
+			var GAnalytics_script = document.createElement('script');
+			GAnalytics_script.setAttribute('async', '');
+			GAnalytics_script.src = "https://www.googletagmanager.com/gtag/js?id=" + GOOGLE_ANALYTICS_ID;
+			head.appendChild(GAnalytics_script);
+		}
+
+		if (DV360_CONVERSION_ID.length > 0) {
+			var DV360_script = document.createElement('script');
+			DV360_script.setAttribute('id', 'DV360_Script_ID');
+			DV360_script.setAttribute('async', '');
+			DV360_script.src = "https://www.googletagmanager.com/gtag/js?id=" + DV360_ID + DV360_SRC;
+			head.appendChild(DV360_script);
+		}
+
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', TODAY);
+
+		if (ADWORDS_ID.length > 0) gtag('config', ADWORDS_ID);
+		if (GOOGLE_ANALYTICS_ID.length > 0) gtag('config', GOOGLE_ANALYTICS_ID);
+		if (DV360_CONVERSION_ID.length > 0) gtag('config', DV360_ID + DV360_SRC);
+
+		function RecordAdwordsConversion() {
+			gtag('event', 'conversion', { 'send_to': ADWORDS_COVERSION_ID });
+		}
+
+		function RecordDV360Conversion() {
+			gtag('event', 'conversion', { 'allow_custom_scripts': true, 'send_to': DV360_CONVERSION_ID });
+		}
+	</script>
+	<!-- JS Libraries -->
+	<script>
+		function parseJSONP(ud, jsonp) {
+			var data = jsonp;
+			try {
+				data = data.substring((ud + '(').length);
+				data = data.substring(0, data.length - 2); // to remove ); from the end of the jsonp response text
+				data = JSON.parse(data);
+			} catch (e) {
+				data = e;
+			}
+			return data;
+		}
+
+		function getJSONP(url, success) {
+			var ud = '_' + START_TIME,
+				script = document.createElement('script'),
+				head = document.getElementsByTagName('head')[0] || document.documentElement;
+			window[ud] = function (data) {
+				head.removeChild(script);
+				success && success(data);
+			};
+			script.src = url.replace('callback=', 'callback=' + ud);
+			head.appendChild(script);
+		}
+
+		function getParameterByName(name) {
+			name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+			var regexS = "[\\?&]" + name + "=([^&#]*)";
+			var regex = new RegExp(regexS, 'i');
+			var results = regex.exec(window.location.search);
+			if (results == null)
+				return "";
+			else
+				return decodeURIComponent(results[1].replace(/\+/g, " "));
+		}
+
+		function getAbsolutePath() {
+			const paragraph = window.location.pathname;
+			const regex = /\w+[/,.,0-9,a-z,A-Z]+[html]/g;
+			const removeFromPath = paragraph.match(regex);
+			var absolutePath = window.location.pathname.substring(0, window.location.pathname.indexOf(removeFromPath[0]));
+			if (absolutePath.length > 0) {
+				absolutePath = absolutePath.substring(0, absolutePath.length - 1);
+			}
+			return absolutePath;
+		}
+
+		function getFullUrl_NoQueryString() {
+			if (window.location.search.length > 0) {
+				return window.location.href.substring(0, window.location.href.length - window.location.search.length);
+			} else {
+				return window.location.href;
+			}
+		}
+
+		function getReferrerUrl() {
+			return document.referrer;
+		}
+
+		function removeLoader() {
+			document.getElementsByTagName('body')[0].classList.remove('loading');
+		}
+
+		function addLoader() {
+			document.getElementsByTagName('body')[0].classList.add('loading');
+		}
+
+		function getPageLanguage() {
+			var lang = getParameterByName('lang');
+			if (lang == '')
+				lang = DEFAULT_LANG;
+			return lang;
+		}
+
+		function getIpAddress() {
+			return new Promise((resolve, reject) => {
+				getJSONP(IP_DETECTION_API + "?format=jsonp&callback=", function (data) {
+					// Here you RESOLVE promise result
+					resolve(data.ip);
+				});
+			});
+		}
+
+		function getUserAgent() {
+			return window.navigator.userAgent;
+		}
+
+		function getUserPlatform() {
+			return window.navigator.platform;
+		}
+
+		function getOS() {
+			var os = '';
+			if (macosPlatforms.indexOf(PLATFORM) !== -1) {
+				os = 'Mac OS';
+			} else if (iosPlatforms.indexOf(PLATFORM) !== -1) {
+				os = 'iOS';
+			} else if (windowsPlatforms.indexOf(PLATFORM) !== -1) {
+				os = 'Windows';
+			} else if (/Android/.test(USER_AGENT)) {
+				os = 'Android';
+			} else if (!os && /Linux/.test(PLATFORM)) {
+				os = 'Linux';
+			}
+			return os;
+		}
+
+		function eraseCookie(sKey, sPath, sDomain) {
+			document.cookie = encodeURIComponent(sKey) +
+				"=; expires=Thu, 01 Jan 1970 00:00:00 GMT" +
+				(sDomain ? "; domain=" + sDomain : "") +
+				(sPath ? "; path=" + sPath : "");
+		}
+
+		function setCookie(name, value, hours) {
+			setCookie(name, value, hours, '/', 'Strict', false);
+		}
+
+		function setCookie(name, value, hours, path, sameSite, secure) {
+			var d = new Date;
+			d.setTime(d.getTime() + 60 * 60 * 1000 * hours);
+			//document.cookie = name + "=" + value + ";path=" + path + ";expires=" + d.toGMTString() + ";SameSite=" + sameSite + secure?";Secure":"";
+			document.cookie = name + "=" + value + ";path=" + path + ";expires=" + d.toGMTString() + ";SameSite=" + sameSite + (secure ? "; Secure" : "");
+		}
+
+		function readCookie(name) {
+			name = name.replace(/([.*+?^=!:${}()|[\]\/\\])/g, '\\$1');
+			var regex = new RegExp('(?:^|;)\\s?' + name + '=(.*?)(?:;|$)', 'i'),
+				match = document.cookie.match(regex);
+			return match && unescape(match[1]);
+		}
+
+		function checkRegexp(input, regexp) {
+			var pattern = new RegExp(regexp);
+			return pattern.test(input.value);
+		}
+
+		function uuidv4() {
+			return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+				var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+				return v.toString(16);
+			});
+		}
+
+		function getHeadersEncodeBase64() {
+			return new Promise((resolve, reject) => {
+				getJSONP(HEADERS_ENCODED_BASE64_URL + '?callback=', function (response) {
+					// Here you RESOLVE promise result
+					resolve(response);
+				});
+			});
+		}
+
+		function pad2(number) {
+			if (number <= 9) {
+				number = "0" + number;
+			}
+			return number;
+		}
+
+		function operatorValue(value) {
+			if (value != "") {
+				operator = value;
+			}
+			return operator;
+		}
+
+		function log2event(txt) {
+			console.log('Event logging: ' + txt);
+			if (HOTJAR_ID.length > 0 && typeof (hj) != 'undefined')
+				hj('event', txt);
+		}
+
+		function getAntiFraudIDEXUrl() {
+			return ANTI_FRAUD_MCP_URL + '?Page=' + PAGE_INDEX
+				+ '&ChannelID=' + IDEX_MCP_ANTI_FRAUD_CHANNEL_ID
+				+ '&ClickID=' + UVID + '&Headers=' + HEADERS_ENCODED_BASE64 + "&UserIp=" + btoa(CLIENT_IP_ADDRESS);
+		}
+
+		function AntiFraudIDEX() {
+			return new Promise((resolve, reject) => {
+				try {
+					var antiFraudUrl = getAntiFraudIDEXUrl();
+					var req = new XMLHttpRequest();
+					req.open('GET', antiFraudUrl, false);
+					req.send(null);
+
+					var script = document.createElement('script');
+					script.setAttribute('defer', '');
+					script.text = req.response;
+
+					var head = document.getElementsByTagName('head')[0] || document.documentElement;
+					head.appendChild(script);
+
+					//var headers = req.getAllResponseHeaders().toLowerCase();
+					resolve(req.getResponseHeader('antifrauduniqid'));
+				} catch (e) {
+					console.log(e);
+					reject(e);
+				}
+			});
+		}
+
+		function getAntiFraudEvinaUrl() {
+			return ANTI_FRAUD_EVINA_URL + '?applicationId=' + EVINA_APPLICATION_ID
+				+ '&countryId=' + EVINA_COUNTRY_ID
+				+ '&requestId=' + UVID;
+		}
+
+		function GetEvinaScript() {
+			return new Promise((resolve, reject) => {
+				try {
+					var antiFraudUrl = getAntiFraudEvinaUrl();
+					var req = new XMLHttpRequest();
+					req.open('GET', antiFraudUrl, false);
+					req.send(null);
+
+					var script = document.createElement('script');
+					script.setAttribute('defer', '');
+					script.text = JSON.parse(req.response)[100];
+
+					var head = document.getElementsByTagName('head')[0] || document.documentElement;
+					head.appendChild(script);
+
+					var event = new Event('DCBProtectRun');
+					//var headers = req.getAllResponseHeaders().toLowerCase();
+					resolve(document.dispatchEvent(event));
+				} catch (e) {
+					console.log(e);
+					reject(e);
+				}
+			});
+		}
+
+		function applyGlobalConfiguration() {
+			LANG = getPageLanguage();
+			GCLID = getParameterByName('gclid');
+			UVID = uuidv4(); // Unique Visit Id generated on every page load of LP
+			REFERRER_URL = getReferrerUrl();
+			USER_AGENT = getUserAgent();
+			PLATFORM = getUserPlatform();
+			OS = getOS();
+		}
+
+		function removeURLParameter(url, parameter) {
+			//prefer to use l.search if you have a location/link object
+			var urlparts = url.split('?');
+			if (urlparts.length >= 2) {
+
+				var prefix = encodeURIComponent(parameter) + '=';
+				var pars = urlparts[1].split(/[&;]/g);
+
+				//reverse iteration as may be destructive
+				for (var i = pars.length; i-- > 0;) {
+					//idiom for string.startsWith
+					if (pars[i].lastIndexOf(prefix, 0) !== -1) {
+						pars.splice(i, 1);
+					}
+				}
+
+				return urlparts[0] + (pars.length > 0 ? '?' + pars.join('&') : '');
+			}
+			return url;
+		}
+
+		function stopTimer() {
+			clearInterval(OTP_TIMER);
+			OTP_TIMER = null;
+		}
+
+		function startTimer() {
+			var minute = 60;
+			OTP_TIMER = setInterval(function () {
+				if (minute > 10) {
+					document.getElementById('timer').innerHTML = "00:" + (--minute);
+				} else if (minute > 0) {
+					document.getElementById('timer').innerHTML = "00:0" + (--minute);
+				} else if (minute == 0) {
+					//location.reload();
+				} else {
+					stopTimer();
+				}
+			}, 1000);
+			return OTP_TIMER;
+		}
+
+		function applyShakeEffect() {
+			for (var i = 0; i < shakeable.length; i++) {
+				shakeable[i].addEventListener('click', function (e) {
+					msisdnFieldWrapper.classList.add('shake');
+					setTimeout(function () {
+						msisdnFieldWrapper.classList.remove('shake');
+					}, 1000);
+					pinField.classList.add('shake');
+					setTimeout(function () {
+						pinField.classList.remove('shake');
+					}, 1000);
+				});
+			}
+		}
+
+		function maba3rifLeish() {
+			if (readCookie("MSISDN_OK")) {
+				step("next");
+				events.msisdnStepCookie = "Load with cookie";
+				log2event('msisdnStepCookie');
+				msisdnField.value = readCookie("MSISDN_NUMBER");
+				cleanNumber = readCookie("MSISDN_NUMBER");
+				oprValue = readCookie("OPERATOR");
+			}
+
+			if (readCookie("PIN_OK")) {
+				step("next");
+				step("next");
+				pinField.value = readCookie("PIN");
+				if (typeof goRedirect === 'function') {
+					goRedirect();
+				}
+			}
+			pinField.maxLength = 6;
+		}
+
+		function injectEvinaDomElement() {
+			pinButton = document.getElementById('pinButton');
+			pinButton.setAttribute('id', EVINA_CTA_BUTTON_ID);
+			pinButton = document.getElementById(EVINA_CTA_BUTTON_ID);
+		}
+	</script>
+	<script>
+		applyGlobalConfiguration();
+		document.addEventListener('DOMContentLoaded', async (event) => {
+			log2event("visit");
+			loadServiceImages();
+			loadDOMVariables();
+			addDOMEventListeners();
+			loadCommonImages();
+			applyPageConfiguration();
+			applyPageStyles();
+			CLIENT_IP_ADDRESS = await getIpAddress();
+			CheckRedirectRule('IP') // By IP Address
+			if (IDEX_MCP_ANTI_FRAUD_SCRIPT_ENABLED && IDEX_MCP_ANTI_FRAUD_CHANNEL_ID > 0) {
+				HEADERS_ENCODED_BASE64 = await getHeadersEncodeBase64();
+				ANTI_FRAUD_ID = await AntiFraudIDEX();
+			} else if (EVINA_ANTI_FRAUD_SCRIPT_ENABLED) {
+				injectEvinaDomElement();
+				await GetEvinaScript();
+			}
+			removeLoader();
+		});
+
+		window.addEventListener('load', async (event) => {
+			log2event("fullLoad");
+
+			// bypass auto scrolling.
+			if ('scrollRestoration' in history) {
+				history.scrollRestoration = 'manual';
+			}
+		});
+	</script>
+
+	<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:MediaServiceImageTags msdt:dt="string"></mso:MediaServiceImageTags>
+<mso:lcf76f155ced4ddcb4097134ff3c332f msdt:dt="string"></mso:lcf76f155ced4ddcb4097134ff3c332f>
+<mso:TaxCatchAll msdt:dt="string"></mso:TaxCatchAll>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+<body id="Register" class="loading">
+	<div class="wrapper clearfix">
+		<div class="content clearfix">
+			<div class="languageBtn  clearfix">
+				<label class="langBtn english" href="">En</label>
+				<label class="langBtn arabic" href="">Ar</label>
+			</div>
+			<div class="serviceName  clearfix"></div>
+			<div class="serviceLogo  clearfix">
+				<img name="serviceLogo" src="" border="0" width="244px" height="58px" alt="Service Logo" />
+			</div>
+			<div class="cp-banner  clearfix">
+				<img id="cpBannerImg" src="" border="0" width="547px" height="286px" alt="Main Banner" />
+				<div><span></span></div>
+			</div>
+			<div class="title  clearfix" data-lang="step1title"></div>
+			<div class=" exit-btn clearfix" id="exit-btn" data-lang="exit">
+				<div></div>
+			</div>
+
+			<div id="subscriptions" class=" clearfix">
+				<div class="overlay">
+					<section id="PinReqSec">
+						<div class="subtitle"></div>
+						<form class="" id="msisdnForm" action="" method="post">
+							<p class="message" id="msisdnError"></p>
+							<div class="input-group" id="msisdnFieldWrapper">
+								<div class="input-group-prepend">
+									<div class="input-group-text">
+										<img id="pinReqImg" src="" class="img-fluid" width="64px" height="35px"
+											alt="Mobile Banner" />
+									</div>
+								</div>
+								<input minlength="9" maxlength="13" type="tel" name="msisdn" class="form-control"
+									id="msisdnField" placeholder="" value="05" />
+							</div>
+							<p class="price_1 d-none" data-lang="price_top" id="priceTop"></p>
+							<div class="btnSection">
+								<div class="btn-group jello-horizontal">
+									<button type="submit" name="button"
+										class="btn gray submitNumberBtn bgbtn AFsubmitbtn" id="msisdnButton"
+										data-lang="subscribe"></button>
+								</div>
+							</div>
+							<div class="subtitle2"></div>
+						</form>
+					</section>
+					<section id="tryAgain">
+						<p class="message" id="tryError" data-lang="try_error1"></p>
+						<div class="btnSection">
+							<div class="btn-group jello-horizontal">
+								<button type="submit" name="button" class="btn submitNumberBtn AFsubmitbtn"
+									id="tryagainbutton" data-lang="tryagain" onclick="RequestPin()"></button>
+								<button type="submit" name="button" class="btn arrowBtn AFsubmitbtn"
+									id="tryagainArrow"><span class="blink-1" onclick="RequestPin()">»</span></button>
+							</div>
+						</div>
+					</section>
+					<section id="PinValSec">
+						<div class="pinsubtitle"></div>
+						<form class="error" id="pinForm" action="" method="post">
+							<p class="message" id="pinError" data-lang="pin_error1"></p>
+							<div class="input-group" id="pinFieldWrapper">
+								<div class="input-group-prepend">
+									<div class="input-group-text">
+										<img id="pinValImg" src="" class="img-fluid" alt="Pin Validation Icon"
+											width="48px" height="28px" />
+									</div>
+								</div>
+								<input minlength="4" maxlength="6" type="tel" name="pin" class="form-control"
+									id="pinField" data-lang="pinNumber" placeholder="" value="" />
+							</div>
+							<p class="price_1 d-none" id="price4pinTop" data-lang="price_top"></p>
+							<div class="btnSection">
+								<div class="btn-group jello-horizontal">
+									<button type="submit" name="button" class="btn submitNumberBtn" id="pinButton"
+										data-lang="confirm" disabled></button>
+								</div>
+								<div class="subtitle2"></div>
+								<div id="timerpin"><span class="timer" id="timer">00:59</span></div>
+							</div>
+						</form>
+					</section>
+					<section id="thankYouSec">
+						<div class="content-center pos-absolute-child">
+							<div class="step3title"></div>
+							<div class="step3subtitle"></div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<div class="serviceName  clearfix"></div>
+			<div class="serviceLogo  clearfix">
+				<img name="serviceLogo" src="" border="0" width="244px" height="58px" alt="Service Logo" />
+			</div>
+			<div id="footer" class=" clearfix">
+				<div class="wrapper clearfix">
+					<div class="footer_wrapper  clearfix">
+						<div class="bgfooter clearfix"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="opaque"></div>
+	<div class="popUpError "></div>
+	<div class="loader">
+		<div class="opaque"></div><span id="loaderImg"></span>
+	</div>
+
+	<script>
+		var cpBannerImage = '',
+			msisdnForm = '',
+			msisdnError = '',
+			msisdnFieldWrapper = '',
+			msisdnField = null,
+			msisdnButton = '',
+			pinForm = '',
+			pinError = '',
+			pinFieldWrapper = '',
+			pinField = '',
+			pinButton = '',
+			footer = '',
+			loader = '',
+			steps = '',
+			price = '',
+			terms = '',
+			shakeable = '',
+			priceTopBkd = '',
+			cleanNumber = '',
+			operator = 0,
+			apifolder = "API",
+			oprValue = '0',
+			prefix = null,
+			currentStep = 1;
+
+		function loadDOMVariables() {
+			cpBannerImage = document.getElementById('cpBannerImg');
+			msisdnForm = document.getElementById('msisdnForm');
+			msisdnError = document.getElementById('msisdnError');
+			msisdnFieldWrapper = document.getElementById('msisdnFieldWrapper');
+			msisdnField = document.getElementById('msisdnField');
+			msisdnButton = document.getElementById('msisdnButton');
+			pinForm = document.getElementById('pinForm');
+			pinError = document.getElementById('pinError');
+			pinFieldWrapper = document.getElementById('pinFieldWrapper');
+			pinField = document.getElementById('pinField');
+			pinButton = document.getElementById('pinButton');
+			footer = document.getElementsByTagName('footer')[0];
+			loader = document.getElementById('loader');
+			steps = document.querySelectorAll('.step');
+			price = document.getElementsByClassName('price');
+			terms = document.getElementById('terms');
+			shakeable = document.getElementsByClassName('shakeable');
+			priceTopBkd = document.getElementById('priceTopBkd');
+		}
+
+		function loadCommonImages() {
+			if (document.getElementById('loaderImg') != null && LOADER_IMG_FILENAME.length > 0) {
+				document.getElementById('loaderImg').style.backgroundImage = 'url(' + RESOURCES_BASE_URL + RESOURCES_COMMON_ABSOLUTE_PATH + '' + LOADER_IMG_FILENAME + ')';
+			} else {
+				console.log('Id: "#loaderImg" not found!');
+			}
+			if (document.getElementById('close_btnImg') != null && CLOSE_BTN_IMG_FILENAME.length > 0) {
+				document.getElementById('close_btnImg').style.backgroundImage = 'url(' + RESOURCES_BASE_URL + RESOURCES_COMMON_ABSOLUTE_PATH + '' + CLOSE_BTN_IMG_FILENAME + ')';
+			} else {
+				console.log('Id: "#close_btnImg" not found!');
+			}
+			if (document.getElementById('flagsImg') != null && FLAGS_IMG_FILENAME.length > 0) {
+				document.getElementById('flagsImg').style.backgroundImage = 'url(' + RESOURCES_BASE_URL + RESOURCES_COMMON_ABSOLUTE_PATH + '' + FLAGS_IMG_FILENAME + ')';
+			} else {
+				console.log('Id: "#flagsImg" not found!');
+			}
+		}
+
+		function loadServiceImages() {
+			if (APPLY_BACKGROUND_IMAGE && BACKGROUND_IMAGE_FILENAME.length > 0) {
+				document.getElementsByTagName('html')[0].style.backgroundImage = 'url(' + RESOURCES_BASE_URL + RESOURCES_SERVICE_ABSOLUTE_PATH + '' + BACKGROUND_IMAGE_FILENAME + ')';
+			} else {
+				console.log('No Background Image Set!');
+			}
+			if (document.getElementsByTagName('link')) {
+				var list = [].slice.call(document.getElementsByTagName('link'));
+				var favIconElem = list.find(e => e.rel == 'icon');
+				if (favIconElem != null) {
+					favIconElem.href = RESOURCES_BASE_URL + RESOURCES_SERVICE_ABSOLUTE_PATH + '' + FAV_ICON_IMG_FILENAME;
+				}
+			} else {
+				console.log('No Link element found!');
+			}
+			if (document.getElementsByName('serviceLogo') != null && SERVICE_LOGO_IMG_FILENAME.length > 0) {
+				Array.from(document.getElementsByName('serviceLogo')).filter(x => x.src = RESOURCES_BASE_URL + RESOURCES_SERVICE_ABSOLUTE_PATH + '' + SERVICE_LOGO_IMG_FILENAME);
+			} else {
+				console.log('Id: "#serviceLogo" not found!');
+			}
+			if (document.getElementById('cpBannerImg') != null && CP_BANNER_IMG_FILENAME.length > 0) {
+				document.getElementById('cpBannerImg').src = RESOURCES_BASE_URL + RESOURCES_SERVICE_ABSOLUTE_PATH + '' + CP_BANNER_IMG_FILENAME;
+			} else {
+				console.log('Id: "#cpBannerImg" not found!');
+			}
+			if (document.getElementById('pinReqImg') != null && PIN_REQ_IMG_FILENAME.length > 0) {
+				document.getElementById('pinReqImg').src = RESOURCES_BASE_URL + RESOURCES_SERVICE_ABSOLUTE_PATH + '' + PIN_REQ_IMG_FILENAME;
+			} else {
+				console.log('Id: "#pinReqImg" not found!');
+			}
+			if (document.getElementById('pinValImg') != null && PIN_VAL_IMG_FILENAME.length > 0) {
+				document.getElementById('pinValImg').src = RESOURCES_BASE_URL + RESOURCES_SERVICE_ABSOLUTE_PATH + '' + PIN_VAL_IMG_FILENAME;
+			} else {
+				console.log('Id: "#pinValImg" not found!');
+			}
+		}
+
+		function applyPageConfiguration() {
+			document.title = PAGE_TITLE;
+			document.getElementsByTagName('html')[0].setAttribute('lang', LANG);
+			if (document.getElementsByClassName('serviceName').length > 0) {
+				Array.from(document.getElementsByClassName('serviceName')).filter(x => x.innerHTML = PAGE_TITLE);
+			}
+			if (SHOW_TITLE_ABOVE_SUBSCRIPTION_BOX && document.getElementsByClassName('title').length > 0 && TRANSLATIONS[LANG].step1title) {
+				Array.from(document.getElementsByClassName('title')).filter(x => x.innerHTML = TRANSLATIONS[LANG].step1title);
+			}
+			if (SHOW_SUBTITLE_IN_SUBSCRIPTION_BOX && document.getElementsByClassName('subtitle').length > 0 && TRANSLATIONS[LANG].step1subtitle) {
+				Array.from(document.getElementsByClassName('subtitle')).filter(x => x.innerHTML = TRANSLATIONS[LANG].step1subtitle);
+			}
+			if (SHOW_SUBTITLE_IN_SUBSCRIPTION_BOX_FOOTER && document.getElementsByClassName('subtitle2').length > 0 && TRANSLATIONS[LANG].step1subtitle2) {
+				Array.from(document.getElementsByClassName('subtitle2')).filter(x => x.innerHTML = TRANSLATIONS[LANG].step1subtitle2);
+			}
+			document.getElementsByClassName('bgfooter')[0].innerHTML = TRANSLATIONS[LANG].terms;
+			document.getElementsByClassName('bgbtn')[0].innerHTML = TRANSLATIONS[LANG].subscribe;
+			msisdnField.setAttribute('placeholder', TRANSLATIONS[LANG].placeholderMobile);
+			pinField.setAttribute('placeholder', TRANSLATIONS[LANG].placeholderPin);
+			document.getElementsByClassName('pinsubtitle')[0].innerHTML = TRANSLATIONS[LANG].step2title + cleanNumber;
+			document.getElementsByClassName('step3title')[0].innerHTML = TRANSLATIONS[LANG].step3title;
+			document.getElementsByClassName('step3subtitle')[0].innerHTML = TRANSLATIONS[LANG].step3subtitle;
+			pinButton.innerHTML = TRANSLATIONS[LANG].confirm;
+			document.getElementById('PinReqSec').style.display = 'block';
+			document.getElementById('tryagainbutton').innerHTML = TRANSLATIONS[LANG].tryagain;
+			document.querySelector('#exit-btn >div').innerHTML = TRANSLATIONS[LANG].exit;
+			document.querySelector('.cp-banner >div >span').innerHTML = TRANSLATIONS[LANG].banner_CTA_txt;
+
+			if (LANG == "" || LANG == "en") {
+				document.getElementsByClassName('english')[0].classList.add('activeLang');
+				document.getElementsByClassName('arabic')[0].classList.remove('activeLang');
+			} else {
+				document.getElementsByClassName('arabic')[0].classList.add('activeLang');
+				document.getElementsByClassName('english')[0].classList.remove('activeLang');
+			}
+
+			msisdnButton.disabled = true;
+
+			var jsonString = sessionStorage.getItem(REDIRECT_RULES_COOKIE_NAME);
+			if (jsonString != null && typeof (jsonString) != 'undefined' && jsonString.length > 0) {
+				var object = JSON.parse(jsonString);
+				if (object.MSISDN != null) {
+					MSISDN_DETECTED_FROM_PREFIX = object.MSISDN;
+					msisdnField.value = MSISDN_DETECTED_FROM_PREFIX.startsWith('0') ? MSISDN_DETECTED_FROM_PREFIX : '0' + MSISDN_DETECTED_FROM_PREFIX;
+					sessionStorage.removeItem(REDIRECT_RULES_COOKIE_NAME);
+				}
+				if (object.OPERATOR_ID != null) {
+					OPERATOR_ID = object.OPERATOR_ID;
+				}
+			}
+
+			if (typeof (msisdnField) != 'undefined') {
+				msisdnField.setSelectionRange(msisdnField.value.length, msisdnField.value.length);
+				msisdnField.focus();
+			}
+		}
+
+		function applyPageStyles() {
+			if (ENABLE_SUBSCRIPTION_POPUP) {
+				document.getElementById("Register").classList.add("allow-popup");
+				if (ALLOW_OTP_POPUP_I_VIDEO) {
+					document.getElementById("Register").classList.add("otp_popup_invideo");
+				}
+			}
+			document.getElementsByTagName('body')[0].classList.remove(document.getElementsByTagName('body')[0].classList[0]);
+			document.getElementsByTagName('body')[0].classList.add(LANG);
+
+			document.getElementsByTagName('body')[0].style.backgroundColor = BACKGROUND_COLOR;
+
+			if (document.getElementsByClassName('activeLang').length > 0) {
+				document.getElementsByClassName('activeLang')[0].style.backgroundColor = PRIMARY_COLOR;
+			}
+
+			if (SHOW_SERVICE_LOGO) {
+				var logoIndex = 0;
+				if (SHOW_SERVICE_LOGO_IN_FOOTER)
+					logoIndex = 1;
+				if (document.getElementsByName('serviceLogo').length > 0 && SERVICE_LOGO_IMG_FILENAME.length > 0) {
+					document.getElementsByClassName('serviceLogo')[logoIndex].style.display = 'block';
+					document.getElementsByClassName('cp-Banner')[0].style.margin = '4em auto';
+				} else {
+					document.getElementsByClassName('serviceLogo')[logoIndex].style.display = null;
+					document.getElementsByClassName('cp-Banner')[0].style.margin = null;
+				}
+			}
+
+			if (SHOW_SERVICE_NAME) {
+				var serviceIndex = 0;
+				if (SHOW_SERVICE_NAME_IN_FOOTER)
+					serviceIndex = 1;
+				if (document.getElementsByClassName('serviceName').length > 0) {
+					document.getElementsByClassName('serviceName')[serviceIndex].style.display = 'block';
+					document.getElementsByClassName('cp-Banner')[0].style.margin = '4em auto';
+				} else {
+					document.getElementsByClassName('serviceName')[serviceIndex].style.display = null;
+					document.getElementsByClassName('cp-Banner')[0].style.margin = null;
+				}
+			}
+
+			if (SHOW_TITLE_ABOVE_SUBSCRIPTION_BOX && document.getElementsByClassName('title').length > 0 && TRANSLATIONS[LANG].step1title) {
+				document.getElementsByClassName('title')[0].style.display = 'block';
+			} else if (!SHOW_TITLE_ABOVE_SUBSCRIPTION_BOX && document.getElementsByClassName('title').length > 0) {
+				document.getElementsByClassName('title')[0].style.display = 'none';
+			}
+			if (SHOW_SUBTITLE_IN_SUBSCRIPTION_BOX && document.getElementsByClassName('subtitle').length > 0 && TRANSLATIONS[LANG].step1subtitle) {
+				document.getElementsByClassName('subtitle')[0].style.display = 'block';
+			} else if (!SHOW_SUBTITLE_IN_SUBSCRIPTION_BOX && document.getElementsByClassName('subtitle').length > 0) {
+				document.getElementsByClassName('subtitle')[0].style.display = 'none';
+			}
+			if (SHOW_SUBTITLE_IN_SUBSCRIPTION_BOX_FOOTER && document.getElementsByClassName('subtitle2').length > 0 && TRANSLATIONS[LANG].step1subtitle2) {
+				document.getElementsByClassName('subtitle2')[0].style.display = 'block';
+				document.getElementsByClassName('subtitle2')[0].style.paddingTop = 0;
+				document.getElementsByClassName('subtitle2')[0].style.paddingBottom = '10px';
+				document.getElementsByClassName('btnSection')[0].style.marginBottom = 0;
+			} else if (!SHOW_SUBTITLE_IN_SUBSCRIPTION_BOX_FOOTER && document.getElementsByClassName('subtitle2').length > 0) {
+				document.getElementsByClassName('subtitle2')[0].style.display = 'none';
+				document.getElementsByClassName('subtitle2')[0].style.paddingTop = null;
+				document.getElementsByClassName('subtitle2')[0].style.paddingBottom = null;
+				document.getElementsByClassName('btnSection')[0].style.marginBottom = null;
+			}
+
+			msisdnButton.style.color = PRIMARY_COLOR;
+			pinButton.style.color = PRIMARY_COLOR;
+		}
+
+		function IPtoNum(ip) {
+			return Number(ip.split(".").map(d => ("000" + d).substr(-3)).join(""));
+		}
+
+		function isIPInRange(range, ip) {
+			return range.some(
+				([min, max]) => IPtoNum(min) <= IPtoNum(ip) && IPtoNum(max) >= IPtoNum(ip)
+			);
+		}
+
+		function CreateTeleportedObject() {
+			var teleportedObj = new Object();
+			teleportedObj.MSISDN = MSISDN_DETECTED_FROM_PREFIX;
+			teleportedObj.OPERATOR_ID = OPERATOR_ID;
+			return teleportedObj;
+		}
+
+		async function CheckConfigChangesRules(byRule) {
+			if (!FORCE_CONFIG_CHANGE_RULES)
+				return;
+
+			var ruleFoundList = CONFIG_CHANGE_RULES.filter(x => (x.Type == byRule && x.Enabled));
+			if (typeof (ruleFoundList) == 'undefined') return;
+
+			for (let ruleFound of ruleFoundList) {
+				if (byRule == 'IP') {
+					for (let element of COUNTRY_OPERATORS.Country.Operators.Array) {
+						var isInRange = isIPInRange(element.IP_Ranges, CLIENT_IP_ADDRESS);
+						if (isInRange) return;
+
+						if (ruleFound.Operators.findIndex(x => x.Operator_Id == element.Id) >= 0) {
+
+						}
+					}
+				} else if (byRule == 'MSISDN') {
+					if (ruleFound.Operators.findIndex(x => x.Operator_Id == OPERATOR_ID) >= 0) {
+						var configObj = ruleFound.Operators.find(x => x.Operator_Id == OPERATOR_ID);
+						if (configObj != null && APPLICATION_ID != configObj.Application_Id) {
+							APPLICATION_ID = configObj.Application_Id;
+							PAGE_TITLE = configObj.Page_Title;
+							CAMPAIGN_ID = configObj.Campaign_Id;
+							IDEX_MCP_ANTI_FRAUD_CHANNEL_ID = configObj.Idex_Mcp_Anti_Fraud_Channel_Id;
+							SEND_BILLING_FREQUENCY = configObj.Send_Billing_Frequency;
+							BILLING_FREQUENCY = configObj.Billing_Frequency;
+							REDIRECT_TO_STORE_AFTER_SUBSCRIPTION = configObj.Redirect_To_Store_After_Subcscription;
+							EVINA_ANTI_FRAUD_SCRIPT_ENABLED = configObj.Evina_Anti_Fraud_Script_Enabled;
+							if (typeof (configObj.Translations['ar']) != 'undefined')
+								TRANSLATIONS = configObj.Translations;
+							applyPageConfiguration();
+							if (IDEX_MCP_ANTI_FRAUD_SCRIPT_ENABLED && IDEX_MCP_ANTI_FRAUD_CHANNEL_ID > 0) {
+								HEADERS_ENCODED_BASE64 = await getHeadersEncodeBase64();
+								ANTI_FRAUD_ID = await AntiFraudIDEX();
+							} else {
+								HEADERS_ENCODED_BASE64 = '';
+								ANTI_FRAUD_ID = '';
+							}
+							if (EVINA_ANTI_FRAUD_SCRIPT_ENABLED)
+								injectEvinaDomElement();
+							await GetEvinaScript();
+						}
+					}
+				}
+			}
+		}
+
+		function CheckRedirectRule(byRule) {
+			if (!FORCE_REDIRECT_RULES)
+				return;
+
+			var ruleFoundList = REDIRECT_RULES.filter(x => (x.Type == byRule && x.Enabled));
+			if (typeof (ruleFoundList) == 'undefined') return;
+
+			for (let ruleFound of ruleFoundList) {
+				if (byRule == 'IP') {
+					for (let element of COUNTRY_OPERATORS.Country.Operators.Array) {
+						var isInRange = isIPInRange(element.IP_Ranges, CLIENT_IP_ADDRESS);
+						if (isInRange) return;
+
+						if (ruleFound.Operators.findIndex(x => x == element.Id) >= 0) {
+							var redirectUrl = ruleFound.Redirect_To_Url;
+							if (ruleFound.Redirect_With_QueryString) {
+								redirectUrl += window.location.search;
+							}
+							window.location = redirectUrl;
+						}
+					}
+				} else if (byRule == 'MSISDN') {
+					if (ruleFound.Operators.findIndex(x => x == OPERATOR_ID) >= 0) {
+						//eraseCookie(REDIRECT_RULES_COOKIE_NAME);
+						sessionStorage.removeItem(REDIRECT_RULES_COOKIE_NAME);
+						sessionStorage.setItem(REDIRECT_RULES_COOKIE_NAME, JSON.stringify(CreateTeleportedObject()));
+						//setCookie(REDIRECT_RULES_COOKIE_NAME, JSON.stringify(CreateTeleportedObject()), 1, '/', 'Lax', true);
+						var redirectUrl = ruleFound.Redirect_To_Url;
+						if (ruleFound.Redirect_With_QueryString) {
+							redirectUrl += window.location.search;
+						}
+						window.location = redirectUrl;
+					}
+				}
+			}
+		}
+
+		function step(direction) {
+			firstStepIndex = 1;
+			finalStepIndex = steps.length;
+			if (direction == 'next') {
+				currentStep = (currentStep < finalStepIndex) ? currentStep += 1 : finalStepIndex;
+				if (currentStep <= finalStepIndex) {
+					toggleVisible(currentStep, currentStep - 1);
+				}
+				if (typeof stepNext === 'function') {
+					stepNext();
+				}
+			} else {
+				currentStep = (currentStep > firstStepIndex) ? currentStep -= 1 : firstStepIndex;
+				if (currentStep >= firstStepIndex) {
+					toggleVisible(currentStep, currentStep + 1);
+				}
+				if (typeof stepPrevious === 'function') {
+					stepPrevious();
+				}
+			}
+		}
+
+		function stepPrevious() { }
+
+		function stepNext() { }
+
+		function step_timeout(direction, time_out) {
+			setTimeout(function () {
+				step(direction);
+			}, time_out);
+		}
+
+		function onFocusOutMsisdn(elem) {
+			if (elem.value == '') {
+				elem.placeholder = TRANSLATIONS[LANG].placeholderMobile;
+			}
+			if (OS == 'Android') {
+				// window.scrollBy(0, 0);
+			}
+			if (elem.value.length >= COUNTRY_OPERATORS.Country.countryminlength) {
+				log2event("msisdnAttempt");
+				msisdnField.removeEventListener("focusout", onFocusOutMsisdn);
+			}
+		}
+
+		function onFocusOutPin(elem) {
+			console.log('====>>>>> What the heck??!!!');
+			if (elem.value.length >= checkPinCodeMaxLength()) {
+				log2event("pinAttempt");
+				pinField.removeEventListener("focusout", onFocusOutPin);
+			}
+		}
+
+		function DetectOperatorFromPrefix(tempVal) {
+			if (tempVal.startsWith('00')) {
+				tempVal = tempVal.substring(('00').length);
+			}
+			if (tempVal.startsWith(COUNTRY_OPERATORS.Country.CountryCode)) {
+				tempVal = tempVal.substring((COUNTRY_OPERATORS.Country.CountryCode).length);
+			}
+			if (tempVal.startsWith('0')) {
+				tempVal = tempVal.substring(('0').length);
+			}
+			var prefix_length = 0;
+			if (COUNTRY_OPERATORS.Country.Operators.Array.filter(x => x.Prefixes.length > 0).length > 0) {
+				var op1 = COUNTRY_OPERATORS.Country.Operators.Array.filter(x => x.Prefixes.length > 0)[0];
+				if (op1.Prefixes.filter(x => x.length > 0)) {
+					prefix_length = op1.Prefixes.filter(x => x.length > 0)[0].length;
+				}
+			}
+			if (tempVal.length >= prefix_length) {
+				var splitVal = tempVal.substring(0, prefix_length);
+				var detectedOp = COUNTRY_OPERATORS.Country.Operators.Array.find(element => {
+					if (element.Prefixes.some(pref => { return pref.indexOf(splitVal) >= 0; })) {
+						return element;
+					}
+				});
+				if (typeof (detectedOp) != 'undefined') {
+					MSISDN_DETECTED_FROM_PREFIX = tempVal;
+					OPERATOR_ID = detectedOp.Id; // Set the global variable to the Id of the operator detected by MSISDN prefix algorithm
+				} else {
+					MSISDN_DETECTED_FROM_PREFIX = '';
+					OPERATOR_ID = 0;
+				}
+			}
+		}
+
+		function ShowNumberEntry() {
+			console.log("Image Clicked");
+			document.getElementById("Register").classList.add("show-number-entry");
+		}
+
+		function addDOMEventListeners() {
+			if (SHOW_BANNER_CTA_BTN) {
+				document.querySelector(".cp-banner >div").style.display = 'inline-grid';
+				if (ENABLE_SUBSCRIPTION_POPUP) {
+					document.querySelector(".cp-banner >div").addEventListener('click', function (e) {
+						e.preventDefault();
+						ShowNumberEntry();
+					});
+				}
+			}
+
+			if (SHOW_EXIT_BTN) {
+				document.getElementById("exit-btn").classList.add("show");
+			}
+
+			if (ENABLE_SUBSCRIPTION_POPUP) {
+				cpBannerImg.addEventListener('click', function (e) {
+					e.preventDefault();
+					ShowNumberEntry();
+				});
+			}
+
+			msisdnField.addEventListener('focusin', function () {
+				this.placeholder = '';
+				log2event('inputClickMSISDN');
+				removeError();
+			});
+
+			msisdnField.addEventListener("focusout", function (e) {
+				e.preventDefault();
+				onFocusOutMsisdn(this);
+			});
+
+			msisdnField.addEventListener("keyup", function (e) {
+				DetectOperatorFromPrefix(this.value);
+				if (OPERATOR_ID != '' && OPERATOR_ID > 0) {
+					CheckRedirectRule('MSISDN'); // By MSISDN
+					CheckConfigChangesRules('MSISDN'); // By MSISDN
+				}
+
+				var color = PRIMARY_COLOR;
+				var bgColor = SECONDARY_COLOR;
+
+				if (this.value.length >= COUNTRY_OPERATORS.Country.countryminlength) {
+					if (ALLOW_GRADIENT_PRIMARY_COLOR)
+						bgColor = GRADIENT_PRIMARY_COLOR;
+					else
+						bgColor = PRIMARY_COLOR;
+					color = SECONDARY_COLOR;
+					msisdnButton.disabled = false;
+				}
+				else {
+					bgColor = SECONDARY_COLOR;
+					color = PRIMARY_COLOR;
+					msisdnButton.disabled = true;
+				}
+
+				Array.from(msisdnForm.getElementsByClassName('btn')).forEach(btn => {
+					if (ALLOW_GRADIENT_PRIMARY_COLOR)
+						btn.style.background = bgColor;
+					else
+						btn.style.backgroundColor = bgColor;
+					btn.style.color = color;
+				});
+			});
+
+			msisdnForm.addEventListener('submit', function (e) {
+				e.preventDefault();
+				msisdnFormSubmitBefore();
+				msisdnSubmit();
+			});
+
+			pinField.addEventListener('focusin', function () {
+				this.placeholder = '';
+				removeError();
+				log2event('inputClickPIN');
+			});
+
+			pinField.addEventListener("focusout", function (e) {
+				e.preventDefault();
+				if (this.value == '') {
+					this.placeholder = TRANSLATIONS[LANG].placeholderPin;
+				}
+				onFocusOutPin(this);
+			});
+
+			pinField.addEventListener("keyup", function (e) {
+				var color = PRIMARY_COLOR;
+				var bgColor = SECONDARY_COLOR;
+
+				if (this.value.length >= checkPinCodeMaxLength()) {
+					if (ALLOW_GRADIENT_PRIMARY_COLOR)
+						bgColor = GRADIENT_PRIMARY_COLOR;
+					else
+						bgColor = PRIMARY_COLOR;
+					color = SECONDARY_COLOR;
+					pinButton.disabled = false;
+				}
+				else {
+					bgColor = SECONDARY_COLOR;
+					color = PRIMARY_COLOR;
+					pinButton.disabled = true;
+				}
+
+				Array.from(pinForm.getElementsByClassName('btn')).forEach(btn => {
+					if (ALLOW_GRADIENT_PRIMARY_COLOR)
+						btn.style.background = bgColor;
+					else
+						btn.style.backgroundColor = bgColor;
+					btn.style.color = color;
+				});
+			});
+
+			pinForm.addEventListener('submit', function (e) {
+				e.preventDefault();
+				pinFormSubmitBefore();
+				pinSubmit();
+			});
+
+			document.getElementsByClassName('english')[0].addEventListener('click', function (e) {
+				if (window.location.search == "" || window.location.search == "?lang=en" || window.location.search == "?lang=ar") {
+					document.location.href = removeURLParameter(window.location.href, "lang") + "?lang=en";
+				}
+				else {
+					document.location.href = removeURLParameter(window.location.href, "lang") + "&lang=en";
+				}
+				document.getElementsByClassName('arabic')[0].classList.remove('activeLang');
+				document.getElementsByClassName('english')[0].classList.add('activeLang');
+			});
+			document.getElementsByClassName('arabic')[0].addEventListener('click', function () {
+				if (window.location.search == "" || window.location.search == "?lang=en" || window.location.search == "?lang=ar") {
+					document.location.href = removeURLParameter(window.location.href, "lang") + "?lang=ar";
+				}
+				else {
+					document.location.href = removeURLParameter(window.location.href, "lang") + "&lang=ar";
+				}
+				document.getElementsByClassName('english')[0].classList.remove('activeLang');
+				document.getElementsByClassName('arabic')[0].classList.add('activeLang');
+			});
+		}
+
+		function OperatorObjFound(obj) {
+			OPERATOR_ID = obj.Id;
+			BASE_URL = obj.SP.API;
+		}
+
+		function validMsisdn() {
+			// window.scrollTo(0, 0);
+
+			var checkMsisdn = new ValidateMsisdn(COUNTRY_OPERATORS);
+			var validatedMsisdn = checkMsisdn.validateMSISDN();
+			cleanNumber = checkMsisdn.cleanNumber;
+
+			if (!validatedMsisdn) {
+				msisdnError.innerHTML = TRANSLATIONS[LANG].msisdn_error;
+				msisdnFormSubmitAfter();
+				return;
+			}
+			else if (typeof aditionalValidationsMsisdn === 'function' && !aditionalValidationsMsisdn(cleanNumber)) {
+				msisdnFormSubmitAfter();
+				return;
+			}
+			return true;
+		}
+
+		function ValidateMsisdn(operatorParameters) {
+			//this.operatorParameters = operatorParameters;
+			this.countryCallingCode = operatorParameters.Country.CountryCode;
+			this.trunkPrefix = operatorParameters.Country.trunkPrefix;
+			this.internationalPrefix = operatorParameters.Country.internationalPrefix;
+			this.countryminlength = operatorParameters.Country.countryminlength;
+			this.countrymaxlength = operatorParameters.Country.countrymaxlength;
+			this.countrymaxlengthRaw = operatorParameters.Country.countrymaxlengthRaw;
+			this.cleanNumber = '';
+
+			this.validateMSISDN = function () {
+				var msisdnValue = this.partialCleanMSISDN();
+				var msisdnValueLength = msisdnValue.length;
+
+				if (isNaN(msisdnValue) || msisdnValueLength > this.countrymaxlengthRaw || msisdnValueLength < this.countryminlength) {
+					msisdnError.innerHTML = TRANSLATIONS[LANG].msisdn_error;
+				}
+				else if (msisdnValueLength >= this.countryminlength && msisdnValueLength <= this.countrymaxlength) {
+					this.cleanNumber = msisdnValue;
+					this.checkPrefix(this.cleanNumber);
+					return true;
+				}
+				else if (msisdnValueLength > this.countrymaxlength && msisdnValueLength <= this.countrymaxlengthRaw) {
+					this.cleanNumber = this.cleanMSISDN();
+					if (this.cleanNumber.length != this.countryminlength) {
+						msisdnError.innerHTML = TRANSLATIONS[LANG].msisdn_error;
+					}
+					else {
+						this.checkPrefix(this.cleanNumber);
+						return true;
+					}
+				}
+				return false;
+			}
+
+			this.partialCleanMSISDN = function () {
+				var msisdnValue = msisdnField.value;
+				var msisdnClean = msisdnValue;
+
+				if (msisdnClean.substring(0, 1) == '+') {
+					msisdnClean = msisdnClean.substring(1);
+				}
+				if (msisdnClean.substring(0, this.internationalPrefix.length) == this.internationalPrefix) {
+					msisdnClean = msisdnClean.substring(this.internationalPrefix.length);
+				}
+				if (msisdnClean.substring(0, this.trunkPrefix.length) == this.trunkPrefix) {
+					msisdnClean = msisdnClean.substring(this.trunkPrefix.length);
+				}
+
+				return msisdnClean;
+			}
+
+			this.cleanMSISDN = function () {
+				var msisdnValue = msisdnField.value;
+				var msisdnClean = msisdnValue;
+
+				if (msisdnClean.substring(0, 1) == '+') {
+					msisdnClean = msisdnClean.substring(1);
+				}
+				if (msisdnClean.substring(0, this.internationalPrefix.length) == this.internationalPrefix) {
+					msisdnClean = msisdnClean.substring(this.internationalPrefix.length);
+				}
+				if (msisdnClean.substring(0, this.trunkPrefix.length) == this.trunkPrefix) {
+					msisdnClean = msisdnClean.substring(this.trunkPrefix.length);
+				}
+				if (msisdnClean.substring(0, this.countryCallingCode.length) == this.countryCallingCode) {
+					msisdnClean = msisdnClean.substring(this.countryCallingCode.length);
+				}
+				if (msisdnClean.substring(0, this.trunkPrefix.length) == this.trunkPrefix) {
+					msisdnClean = msisdnClean.substring(this.trunkPrefix.length);
+				}
+				return msisdnClean;
+			}
+
+			this.checkPrefix = function (msisdnCleanedNumber) {
+				var identifiedOperatorMsisdn = false;
+				var prefix_length = 0;
+				if (COUNTRY_OPERATORS.Country.Operators.Array.filter(x => x.Prefixes.length > 0).length > 0) {
+					var op1 = COUNTRY_OPERATORS.Country.Operators.Array.filter(x => x.Prefixes.length > 0)[0];
+					if (op1.Prefixes.filter(x => x.length > 0)) {
+						prefix_length = op1.Prefixes.filter(x => x.length > 0)[0].length;
+					}
+				}
+				var prefixToCheck = msisdnCleanedNumber.substring(0, prefix_length);
+				var opObj = COUNTRY_OPERATORS.Country.Operators.Array.find(x => x.Prefixes.find(y => y == prefixToCheck));
+				if (typeof (opObj != 'undefined')) {
+					OperatorObjFound(opObj);
+					this._setLog2event(OPERATOR_ID);
+					identifiedOperatorMsisdn = true;
+				}
+				if (!identifiedOperatorMsisdn) {
+					operatorValue(null);
+					events['identifiedOperator'] = 'Identified Other Operator';
+					log2event('identifiedOperator');
+				}
+			}
+
+			this._setLog2event = function (opId) {
+				events['identifiedOperator'] = 'identifiedOperator - ' + opId;
+				log2event('identifiedOperator');
+			}
+		}
+
+		function aditionalValidationsMsisdn(cleanedMsisdn) {
+			var validOperatorMsisdn = false;
+			var prefix_length = 0;
+			if (COUNTRY_OPERATORS.Country.Operators.Array.filter(x => x.Prefixes.length > 0).length > 0) {
+				var op1 = COUNTRY_OPERATORS.Country.Operators.Array.filter(x => x.Prefixes.length > 0)[0];
+				if (op1.Prefixes.filter(x => x.length > 0)) {
+					prefix_length = op1.Prefixes.filter(x => x.length > 0)[0].length;
+				}
+			}
+			var prefixToCheck = cleanedMsisdn.substring(0, prefix_length);
+			var opObj = COUNTRY_OPERATORS.Country.Operators.Array.find(x => x.Prefixes.find(y => y == prefixToCheck));
+			if (typeof (opObj != 'undefined')) {
+				validOperatorMsisdn = true;
+				OperatorObjFound(opObj);
+			}
+			return validOperatorMsisdn;
+		}
+
+		function msisdnFormSubmitBefore() {
+			msisdnButton.disabled = true;
+		}
+
+		function msisdnSubmit() {
+			msisdnOK = validMsisdn();
+			if (!msisdnOK) {
+				msisdnButton.disabled = true;
+				return;
+			} else {
+				msisdnButton.disabled = false;
+			}
+			//ValidateMSISDN_NoLookup();
+			RequestPin();
+		};
+
+		function msisdnFormSubmitAfter() {
+			operatorValue(operator);
+			log2event('ctaClickMSISDN');
+		}
+
+		async function RequestPin() {
+			addLoader();
+			var queryParamet = window.location.search;
+			var queryString = "";
+
+			document.getElementsByClassName('pinsubtitle')[0].innerHTML = TRANSLATIONS[LANG].step2title + cleanNumber;
+
+			if ((ADWORDS_ID.length > 0 || DV360_CONVERSION_ID.length > 0) && APPLICATION_ID > 0) {
+				if (queryParamet == "" || queryParamet == 'undefined') {
+					queryString = "?countryId=" + COUNTRY_ID + "&appid=" + APPLICATION_ID + "&lang=" + LANG;
+				} else {
+					var affParam = queryParamet;
+					affParam = removeURLParameter(affParam, "lang");
+					affParam = removeURLParameter(affParam, "affiliateId");
+					affParam = removeURLParameter(affParam, "offerProfileId");
+					affParam = removeURLParameter(affParam, "countryId");
+					affParam = removeURLParameter(affParam, "appid");
+					if (affParam == "")
+						queryString = affParam + "?countryId=" + COUNTRY_ID +
+							"&appid=" + APPLICATION_ID + "&affiliateId=" + OFFER_ID +
+							"&offerProfileId=" + CAMPAIGN_ID + "&lang=" + LANG;
+					else
+						queryString = affParam + "&countryId=" + COUNTRY_ID +
+							"&appid=" + APPLICATION_ID + "&affiliateId=" + OFFER_ID +
+							"&offerProfileId=" + CAMPAIGN_ID + "&lang=" + LANG;
+				}
+			} else {
+				queryString = window.location.search;
+
+				var str = queryString;
+				if (str.startsWith('?')) str = str.substring(1);
+				str = str.split('&');
+				if (str.length == 1) queryString = '';
+			}
+
+			if (queryString.length == 0) {
+				queryString = "?countryId=" + COUNTRY_ID +
+					"&appid=" + APPLICATION_ID + "&affiliateId=" + OFFER_ID +
+					"&offerProfileId=" + CAMPAIGN_ID + "&lang=" + LANG;
+			}
+
+			var data = "logId=0&msisdn=" + COUNTRY_OPERATORS.Country.CountryCode + cleanNumber
+				+ '&referrer=' + encodeURIComponent(REFERRER_URL) + "&operatorId=" + OPERATOR_ID;
+			var ud = '_' + START_TIME;
+
+			var req_url = BASE_URL + "PinNumber" + queryString
+				+ ((IDEX_MCP_ANTI_FRAUD_SCRIPT_ENABLED && IDEX_MCP_ANTI_FRAUD_CHANNEL_ID > 0) ? "&fraudId=" + ANTI_FRAUD_ID : "")
+				+ "&lpUrl=" + encodeURIComponent(getFullUrl_NoQueryString() + queryString
+					+ (EVINA_ANTI_FRAUD_SCRIPT_ENABLED ? "&" + EVINA_REQUEST_ID_PARAM + "=" + UVID : ""))
+				+ (SEND_BILLING_FREQUENCY ? "&" + (BILLING_FREQUENCY == 'WEEKLY' ? WEEKLY_BILLING_PARAMTER : DAILY_BILLING_PARAMTER) : "")
+				+ "&callback=" + ud
+				+ '&' + data;
+			var req_config = {
+				method: 'get',
+			};
+
+			fetch(req_url, req_config).then(function (response) {
+
+				// If the response is successful, get the Text response
+				if (response.ok) {
+					return response.text();
+				}
+
+				// Otherwise, throw an error
+				return response.text().then(function (text) {
+					throw text;
+				});
+
+			}).then(function (data) {
+				console.log(data);
+				var res = parseJSONP(ud, data);
+				// This is the JSON from our response
+				console.log(res);
+				if (res.status.toLowerCase() == "success") {
+					var url = "";
+					url = new URL(window.top.location + "&" + res.queryString);
+					TRANSACTION_ID = url.searchParams.get("transId");
+
+					document.getElementById('PinReqSec').style.display = 'none';
+					document.getElementById('PinValSec').style.display = 'block';
+					document.getElementById('tryAgain').style.display = 'none';
+					msisdnError.style.display = 'none';
+					removeLoader();
+					startTimer();
+				} else if (res.status.toLowerCase() == "36") {
+					var currentIndex = COUNTRY_OPERATORS.Country.Operators.Array.findIndex(x => x.Id > 0 && x.Id == OPERATOR_ID);
+					if (currentIndex >= 0) currentIndex++;
+					if (currentIndex >= COUNTRY_OPERATORS.Country.Operators.Array.filter(x => x.Id > 0).length) currentIndex = 0;
+					if (currentIndex < COUNTRY_OPERATORS.Country.Operators.Array.filter(x => x.Id > 0).length) {
+						var opObj = COUNTRY_OPERATORS.Country.Operators.Array.filter(x => x.Id > 0)[currentIndex];
+						if (typeof (opObj != 'undefined')) {
+							OperatorObjFound(opObj);
+							RequestPin();
+						}
+					}
+				} else {
+					document.getElementById('PinReqSec').style.display = 'block';
+					document.getElementById('PinValSec').style.display = 'none';
+					document.getElementById('tryAgain').style.display = 'none';
+					msisdnError.innerHTML = res.status;
+					msisdnError.style.display = 'block';
+					stopTimer();
+					removeLoader();
+				}
+			}).catch(function (error) {
+				// There was an error
+				console.warn(error);
+				document.getElementById('PinReqSec').style.display = 'block';
+				document.getElementById('PinValSec').style.display = 'none';
+				document.getElementById('tryAgain').style.display = 'none';
+				msisdnError.innerHTML = TRANSLATIONS[LANG].ERROR;
+				msisdnError.style.display = 'block';
+				stopTimer();
+				removeLoader();
+			});
+		}
+
+		function checkPinCodeMaxLength() {
+			console.log('====>>>>> What the heck??!!!');
+			var opObj = COUNTRY_OPERATORS.Country.Operators.Array.find(x => x.Id == OPERATOR_ID);
+			if (typeof (opObj) != 'undefined') {
+				return opObj.PIN_CODE_LENGTH;
+			} else return 4;
+		}
+
+		function validPin() {
+			// window.scrollTo(0, 0);
+
+			if (pinField.value.toString().length < pinField.minLength || pinField.value.toString().length > pinField.maxLength || isNaN(pinField.value)) {
+				pinFormSubmitAfter();
+				pinError.innerHTML = TRANSLATIONS[LANG].pin_error1;
+				return;
+			}
+			else if (typeof aditionalValidationsPin === 'function' && !aditionalValidationsPin()) {
+				return;
+			}
+			return true;
+		}
+
+		function ValidatePinCode() {
+			if (pinField.value != '') {
+				if (checkRegexp(pinField), "^[-\/0-9 ]+$") {
+					SubmitPinForValidation();
+				}
+				else { return; }
+			}
+			return false;
+		}
+
+		function pinFormSubmitBefore() {
+			pinButton.disabled = true;
+		}
+
+		function pinSubmit() {
+			pinOk = validPin();
+			if (!pinOk) return;
+			ValidatePinCode();
+		}
+
+		function pinFormSubmitAfter() { }
+
+		async function SubmitPinForValidation() {
+			addLoader();
+			var fullMsisdn = COUNTRY_OPERATORS.Country.CountryCode + cleanNumber;
+			var pincode = pinField.value;
+			var ICTLink = 'appid=' + APPLICATION_ID + '&countryId=' + COUNTRY_ID + '&operatorId=' + OPERATOR_ID
+				+ "&msisdn=" + fullMsisdn + '&offerProfileId=' + CAMPAIGN_ID
+				+ '&bg=true';
+			var ICTLinkEncode = encodeURIComponent(ICTLink);
+
+			var queryParamet = window.location.search;
+			var queryString = "";
+
+			if ((ADWORDS_ID.length > 0 || DV360_CONVERSION_ID.length > 0) && APPLICATION_ID > 0) {
+				if (queryParamet == "" || queryParamet == 'undefined') {
+					queryString = "?countryId=" + COUNTRY_ID + "&appid=" + APPLICATION_ID + "&lang=" + LANG;
+				} else {
+					var affParam = queryParamet;
+					affParam = removeURLParameter(affParam, "lang");
+					affParam = removeURLParameter(affParam, "affiliateId");
+					affParam = removeURLParameter(affParam, "offerProfileId");
+					affParam = removeURLParameter(affParam, "countryId");
+					affParam = removeURLParameter(affParam, "appid");
+					if (affParam[0] == "?") {
+						affParam = affParam.substring(1);
+					}
+					queryString = "?countryId=" + COUNTRY_ID + "&appid=" + APPLICATION_ID
+						+ "&affiliateId=" + OFFER_ID + "&offerProfileId=" + CAMPAIGN_ID + "&lang=" + LANG + "&"
+						+ affParam;
+				}
+			} else {
+				queryString = window.location.search;
+
+				var str = queryString;
+				if (str.startsWith('?')) str = str.substring(1);
+				str = str.split('&');
+				if (str.length == 1) queryString = '';
+			}
+
+			if (queryString.length == 0) {
+				queryString = "?countryId=" + COUNTRY_ID +
+					"&appid=" + APPLICATION_ID + "&affiliateId=" + OFFER_ID +
+					"&offerProfileId=" + CAMPAIGN_ID + "&lang=" + LANG;
+			}
+
+			var data = "logId=0&activationCode=" + pincode + '&referrer=' + encodeURIComponent(REFERRER_URL)
+				+ "&operatorId=" + OPERATOR_ID + "&msisdn=" + fullMsisdn + "&transId=" + TRANSACTION_ID;
+
+			var ud = '_' + START_TIME;
+
+
+			var req_url = BASE_URL + "PinNumber" + queryString
+				+ "&lpUrl=" + encodeURIComponent(getFullUrl_NoQueryString() + queryString
+					+ (EVINA_ANTI_FRAUD_SCRIPT_ENABLED ? "&" + EVINA_REQUEST_ID_PARAM + "=" + UVID : ""))
+				+ (SEND_BILLING_FREQUENCY ? "&" + (BILLING_FREQUENCY == 'WEEKLY' ? WEEKLY_BILLING_PARAMTER : DAILY_BILLING_PARAMTER) : "")
+				+ "&callback=" + ud
+				+ '&' + data;
+			var req_config = {
+				method: 'get',
+			};
+
+			fetch(req_url, req_config).then(function (response) {
+
+				// If the response is successful, get the Text response
+				if (response.ok) {
+					return response.text();
+				}
+
+				// Otherwise, throw an error
+				return response.text().then(function (text) {
+					throw text;
+				});
+
+			}).then(function (data) {
+				console.log(data);
+				var res = parseJSONP(ud, data);
+				// This is the JSON from our response
+				console.log(res);
+				if (res.status.toLowerCase() == "success") {
+					if (ADWORDS_COVERSION_ID.length > 0) RecordAdwordsConversion();
+					if (DV360_CONVERSION_ID.length > 0) RecordDV360Conversion();
+					if (REDIRECT_TO_STORE_AFTER_SUBSCRIPTION == true) {
+						if (typeof (res.genericStatus) != 'undefined' && res.genericStatus.indexOf('http') >= 0) {
+							var redirectUrl = res.genericStatus.substring(res.genericStatus.indexOf(':"') + ':"'.length, res.genericStatus.indexOf('",'));
+							window.location = redirectUrl;
+						} else if (typeof (res.url) != 'undefined' && res.url != null && res.url.indexOf('http') >= 0) {
+							var redirectUrl = res.url;
+							window.location = redirectUrl;
+						}
+					}
+					document.getElementById('PinReqSec').style.display = 'none';
+					document.getElementsByClassName('message')[0].style.display = 'none';
+					document.getElementById('PinValSec').style.display = 'none';
+					document.getElementById('thankYouSec').style.display = 'block';
+					document.getElementsByClassName('step3title')[0].innerHTML = TRANSLATIONS[LANG].step3title;
+					document.getElementsByClassName('step3subtitle')[0].innerHTML = TRANSLATIONS[LANG].step3subtitle;
+					stopTimer();
+					removeLoader();
+				} else {
+					document.getElementById('PinReqSec').style.display = 'none';
+					document.getElementById('PinValSec').style.display = 'block';
+					document.getElementById('thankYouSec').style.display = 'none';
+					pinError.innerHTML = res.status;
+					pinError.style.display = 'block';
+					stopTimer();
+					removeLoader();
+				}
+			}).catch(function (error) {
+				// There was an error
+				console.warn(error);
+				document.getElementById('PinReqSec').style.display = 'none';
+				document.getElementById('PinValSec').style.display = 'block';
+				document.getElementById('thankYouSec').style.display = 'none';
+				pinError.innerHTML = TRANSLATIONS[LANG].ERROR;
+				pinError.style.display = 'block';
+				stopTimer();
+				removeLoader();
+			});
+		}
+
+		function removeError() {
+			msisdnForm.classList.remove('error');
+			pinForm.classList.remove('error');
+		}
+	</script>
+</body>
+
+</html>
